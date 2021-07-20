@@ -1,0 +1,14 @@
+- categori produk blm nyambung transaksi
+- diskon produk blm nyambung transaksi
+- Product terbaru  blm nyambung transaksi
+- menafsir belum ganti riwayat
+- registrasi belum fungsi/nyambung database
+- login belum fungsi/nyambung database
+- database belum samsek
+- more logout belum fungsi/nyambung database
+- mengaktifkan tombol min plus
+- cart blm nyambung transaksi 
+- transaksi
+- Detail Pemesanan
+- ngon e atm dan bukti tranfer
+
