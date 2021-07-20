@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 12, 2020 at 06:06 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.9
+-- Waktu pembuatan: 20 Jul 2021 pada 12.05
+-- Versi server: 10.4.18-MariaDB
+-- Versi PHP: 7.3.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `toko_tokoonlinemuv1`
+-- Database: `hijabstyle_ci`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `album`
+-- Struktur dari tabel `album`
 --
 
 CREATE TABLE `album` (
@@ -41,20 +41,10 @@ CREATE TABLE `album` (
   `username` varchar(50) COLLATE latin1_general_ci NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
---
--- Dumping data for table `album`
---
-
-INSERT INTO `album` (`id_album`, `jdl_album`, `album_seo`, `keterangan`, `gbr_album`, `aktif`, `hits_album`, `tgl_posting`, `jam`, `hari`, `username`) VALUES
-(30, 'Konser Kantata Barock 2011', 'konser-kantata-barock-2011', 'Para macan tua yang digawangi Iwan Fals, Setiawan Djody dan Sawung Jabo di Stadion Gelora Bung Karno, Jakarta,\r\nJumat (30/12) malam. Kantata kembali membawakan lagu-lagu legendarisnya\r\nsetelah 21 tahun vakum dari dunia musik.\r\n<div style=\"overflow: hidden; color: #000000; background-color: #ffffff; text-align: left; text-decoration: none; border: medium none\">\r\n<br />\r\n</div>\r\n', '4520kantata_barock.jpg', 'Y', 34, '2012-08-20', '09:12:06', 'Senin', 'admin'),
-(31, 'Festival Terbesar di Dunia', 'festival-seni-terbesar-di-dunia', '', '13festival_seni.jpg', 'Y', 45, '2012-08-20', '09:40:01', 'Senin', 'admin'),
-(28, 'Murah Meriah di Asemka', 'murah-meriah-di-pasar-asemka', 'Pasar Asemka, Jakarta, merupakan pasar grosir yang banyak menyediakan berbagai aksesoris seperti kalung, cincin, Souvenir pernakahan, dan lainnya. Di Pasara Asemka anda akan dimanjakan dengan beragam barang yang dibandrol dengan harga murah meriah dan biasanya dijual grosiran. \r\n', '18asemka.jpg', 'Y', 191, '2012-08-18', '23:14:05', 'Sabtu', 'admin'),
-(29, 'Karpet Raksasa dari Bunga', 'karpet-raksasa-dari-bunga', 'Belgia sedang memperingati peristiwa tahunan &quot;La Fete De La Fleur&quot; atau pesta bunga di bulan Agustus. Ahli bunga merancang karpet raksasa dari bunga di depan Grand Place di Brussel. Karpet ini dibuat menggunakan 700 ribu bunga.\r\n', '92bungaraksasa2.jpg', 'Y', 101, '2012-08-19', '03:02:27', 'Minggu', 'admin');
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `berita`
+-- Struktur dari tabel `berita`
 --
 
 CREATE TABLE `berita` (
@@ -79,27 +69,10 @@ CREATE TABLE `berita` (
   `status` enum('Y','N') COLLATE latin1_general_ci NOT NULL DEFAULT 'Y'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
---
--- Dumping data for table `berita`
---
-
-INSERT INTO `berita` (`id_berita`, `id_kategori`, `username`, `judul`, `sub_judul`, `youtube`, `judul_seo`, `headline`, `aktif`, `utama`, `isi_berita`, `keterangan_gambar`, `hari`, `tanggal`, `jam`, `gambar`, `dibaca`, `tag`, `status`) VALUES
-(4, 55, 'admin', 'Hijab Tutorial Segitiga Instan Sasya Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-segitiga-instan-sasya-original-by-hijab-wanita-cantik', 'N', 'N', 'Y', '<p>Tulisan ini khususkan&nbsp;untuk siapa saja yang ingin atau sedang mengerjakan Bisnis MLM, terlebih bagi yang ingin&nbsp;untuk meraih sukses di Bisnis MLM.&nbsp;Apakah anda adalah orang yang dimaksud ? Ataukah anda sedang mempelajari bisnis MLM ? Apa pendapat Anda tentang bisnis MLM ? Banyak paradigma negative yang berkembangdi masyarakat, sehingga mereka memberikan penilaian buruk mengenai bisnis MLM.&nbsp;<br />\r\n<br />\r\nBahkan banyak orang awam mengatakan bisnis MLM adalah bisnis menjual Mimpi, bisnis yang tidak masuk akal. Sebelum anda membaca lebih jauh, mari kita singkirkan dulu paradigma negative mengenai bisnis MLM. Terimakasih Anda masih terus membaca, tulisan ini saya buat bukan karena saya sekolah khusus di bidang marketing atau telah mencapai tingkat kesuksesan yang gemilang di bisnis MLM, tetapi pengalamanlah yang membuat saya mampu menuliskannya. Semoga yang sedikit ini dapat bermanfaat bagi anda.&nbsp;<br />\r\n<br />\r\nSaya pertama kali mengenal bisnis MLM pada usia yang masih dini untuk berbisnis, yaitu 15 tahun saat itu saya masih di bangku SMA bergabung di salah satu perusahaan besar milik Amerika. Pada usia tersebut pemahaman saya masih sangat bersih terhadap bisnis MLM, sehingga apapun ilmu yang di berikan dapat saya terima dengan baik. Dua tahun kemudian saya tertarik bergabung di sebuah perusahaan Direct Selling Kosmetika terbesar di Indonesia milik Amerika saat itu tahun 1994 sampai tahun 2006 hingga akhirnya perusahaan tersebut menutup bisnisnya di Indonesia.<br />\r\n<br />\r\nSejak tahun 2006 hingga tahun 2009 saya banyak keluar masuk dibeberapa MLM dan Direct selling Indonesia, dan saat ini saya serius menekuni satu perusahaan direct Delling MLM milik perusahaan Swedia. Ini adalah perusahaan terakhir saya untuk coba sana sini yang ujungnya tidak jelas.&nbsp;<br />\r\n<br />\r\nSaya sangat beruntung dapat bertemu dan bergabung di perusahaan tersebut, karena saya sangat meyakini suatu hari yang sudah saya tentukan nanti saya akan dapat meraih apa yang saya inginkan setelah lebih dari 15 tahun melakukan pencarian. Anda jangan seperti saya, semoga apa yang menjadi pengalaman saya dapat menjadi bahan perbandingan bagi anda dalam menentukan pilihan perusahaan yang terbaik dan cocok buat anda, sehingga tidak buang waktu bertahun tahun untuk menemukan perusahaan mana yang tepat.</p>\r\n', 'Sukses Di Bisnis Multi Level Marketing', 'Minggu', '2018-02-18', '10:53:48', 'RV71_5_Cold_Ocean_grande.jpg', 2, 'pesiar,travel,marketing,system,bonus,wisata', 'Y'),
-(5, 55, 'admin', 'Hijab Tutorial Instan Tanika Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-tanika-original-by-hijab-wanita-cantik', 'N', 'N', 'Y', '<p>Baiklah sekarang kita akan membahas tentang bisnis luar biasa MLM, mengapa kita katakan luar biasa ? Karena bisnis ini mampu mengubah kehidupan banyak orang bukan hanya secara Materi tetapi juga kepribadian. Banyak orang bisa menjadi kaya dan kaya raya dengan mengerjakan bisnis MLM, kehidupan finansial mereka berubah sejalan dengan bertumbuhnya penghasilan. Orang orang yang sukses di bisnis MLM apapun, mereka adalah orang orang yang memiliki kepribadian yang mulia dan baik.&nbsp;Kesuksesan di bisnis ini ini sangat didukung oleh Sikap Mental, pola pikir dan kepribadian yang baik. Sukses bukan karena latar belakang pendidikan ataupun modal.<br />\r\n<br />\r\nJadi singkatnya bisnis MLM adalah Bisnis Manusiawi, kita akan bekerja sama dengan banyak orang, membimbing, membantu, menolong, dan lain lain yang sifatnya memberi.&nbsp;Sebagai leader, tentunya anda lebih banyak memberi kepada team anda bukan menerima, feed back dari memberi adalah menerima. Sesuatu yang akan anda terima kemudian hari adalah kesuksesan, hubungan baik, persahabatan, kekeluargaan dan mungkin Tuhan akan memberikan penilaian sebagai Ibadah karena anda telah membantu banyak orang.&nbsp;<br />\r\n<br />\r\nSikap gemar menolong memang tidak membuahkan hasil saat itu juga, anda jangan pernah berfikir kapan yang anda berikan akan menghasilkan, karena Tuhan Maha Kaya, Ia akan memberikan lebih dari apa yang sudah kita tanam.&nbsp;</p>\r\n', 'Sukses sejati datang didari dalam diri.', 'Minggu', '2018-02-18', '10:53:29', 'KYB4_14_Soft_Lavender_1024x1024_f993283a-dae0-4a05-b163-9f6b44465732_grande.jpg', 2, 'pesiar,umrah,marketing,system,bonus', 'Y'),
-(6, 55, 'admin', 'Hijab Tutorial Instan Jenna Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-jenna-original-by-hijab-wanita-cantik', 'N', 'N', 'Y', '<p>Untuk membangun jaringan yang besar dan kuat , seorang distributor MLM perlu kerja keras, semangat , kesabaran dan ketekunan. Selain kerja keras , anda juga perlu melakukan kerja cerdas. Berikut ada 6 strategi yang bisa anda lakukan untuk membangun secara cerdas jaringan bisnis MLM anda.</p>\r\n\r\n<p><strong>1. Membangun Impian Bersama</strong></p>\r\n\r\n<p>Membangun impian adalah pertama yang selalu dianjurkan ketika mulai menjalankan bisnis MLM , tetapi hal yang tidak kalah pentingnya adalah membangun impian bersama. Pertemukan bersama impian anggota jaringan anda. Satukan langkah dan coba semakan visi dan presepsi dulu , baru kemudian bangun jaringan bisnis MLM anda.</p>\r\n\r\n<p><strong>2. Lakukan Duplikasi</strong></p>\r\n\r\n<p>Ingin jaringan bisnis anda berkembang baik ? Lakukan duplikasi dengan benar dan bertahap. Di network marketing , tanpa ada duplikasi , bisnis MLM anda akan berjalan lambat dan kurang gairah. Anda harus meniru langkah orang yang sudah sukses di bisnis MLM anda , dan kembangkan keahlian itu dalam diri anda. Sesudah menguasai hal itu ajarkan kepada downline anda dengan sabar dan tekun tahap demi tahap sesuai dengan kemampuan dari downline anda. Anda harus siap membayar harganya jika ingin mencapai sukses , dengan bekerja keras dan menyediakan waktu untuk bisa membentuk jaringan yang besar.</p>\r\n\r\n<p><strong>3. Terus Belajar dan Inovatif</strong></p>\r\n\r\n<p>Banyak leader &ndash; leader MLM yang sukses dan cepat meraih keberhasilan karena banyak belajar. Tentunya anda harus belajar dari upline atau leader anda , lakukan sharing , Tanya jawab dan solusi pemecahan masalah. Belajar juga bisa dilakukan dengan menghadiri acara presentasi bisnis. Dengarkan dan catat semua tips dan kiat &ndash; kiat sukses dari para leader untuk membangun semangat anda. Yang juga penting adalah membaca buku , mendengarkan kaset dan vcd yang bermanfaat buat pengembangan diri dan pengembangan bisnis MLM anda. Jika anda punya akses internet , anda juga bisa belajar website motivasi dan website belajar online.</p>\r\n', 'Membangun impian adalah pertama yang selalu dianjurkan', 'Minggu', '2018-02-18', '10:53:12', 'AR91_95_Sheva_Maroon_1_grande.png', 2, 'pesiar,umrah,travel,marketing,system,bonus', 'Y'),
-(1, 39, 'admin', 'Hijab Tutorial Instan Keylin Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-keylin-original-by-hijab-wanita-cantik', 'N', 'N', 'Y', '<p>Menurut saya negara ini sangat mengagumkan dalam hal pengelolaan pertaniannya. Dengan luas wilayah yang relatif kecil bila dibandingkan Indonesia, pada tahun 2011 Belanda mampu menjadi negara peringkat 2 untuk negara pengekspor produk pertanian terbesar didunia dengan nilai ekspor mencapai 72,8 miliar Euro.</p>\r\n\r\n<p>Produk andalannya adalah benih dan bunga. Sektor pertanian merupakan pendorong utama ekonomi di Belanda dengan menyumbang 20% pendapatan nasionalnya.&nbsp;Kunci dari majunya pertanian di Belanda adalah Riset. Kebijakan-kebijakan dan teknologi di adopsi dari riset-riset yang dilakukan para ahli. Salah satu pusat riset pertanian yang terkenal disana adalah universitas Wageningen.</p>\r\n\r\n<p>Seperti yang telah di kutip pada sebuah situs bahwa negara Belanda dengan luas hanya&nbsp;41.526km persegi mampu menjadi yang lebih unggul bila dibandingkan dengan negara kita yang luasnya 1.919.440km persegi. dan perlu kita garis bawahi bahwa nyaris seluruh wilayah di Belanda ada di bawah permukaan laut.</p>\r\n\r\n<p>Kedua hal tersebut yang membawa negara Belanda selalu menjadi yang terbaik. Kemajuan sektor pertanian Belanda tidak hanya berfokus pada optimalisasi keuntungan namun juga sangat memperhatikan keberlanjutan dan keramahan lingkungan.</p>\r\n\r\n<p>Pemerintah Belanda membentuk Mentri Ekonomi, Pertanian dan Inovasi yang difungsikan untuk membawa Belanda menjadi negara yang memadukan inovasi di dalam pertanian untuk mencapai ekonomi negara yang kuat dengan mengutamakan keberlanjutan lingkungan hidup.</p>\r\n', 'Penyiraman air atau pestisida pada lahan pertanian', 'Minggu', '2018-02-18', '10:54:53', 'MK97_7_Mocca_grande.jpg', 0, 'pupuk-organik,pestisida-nabati,peternakan,pertanian', 'Y'),
-(2, 39, 'admin', 'Hijab Tutorial Instan Latisha Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-latisha-original-by-hijab-wanita-cantik', 'N', 'N', 'Y', '<p>Salah satu negara yang mengedepankan pertanian adalah Indonesia, negara kita ini memang dikenal sangat cocok dengan sektor pertaniannya. Dengan iklim tropis serta dikaruniai tanah subuh membuat Indonesia menjadi tempat yang sangat cocok untuk bertani. Hampir semua tumbuhan bisa tumbuh di tanah Indonesia.</p>\r\n\r\n<p>Namun ironisnya sistem pertanian serta perhatian khusus kepada para petani di Indonesia sangatlah kurang. Bahkan pertanian di Indonesia ini kalah dengan sistem pertanian negara yang tidak memiliki tanah subur seperti Indonesia. Sehingga sektor pertanian Indonesia pun tak pernah mengalami kemajuan.</p>\r\n', 'Indonesia memperoleh julukan negara agraris.', 'Minggu', '2018-02-18', '10:54:18', 'RYB6_1_Grey_grande.jpg', 1, 'pupuk-organik,pestisida-nabati,peternakan,system,teknologi', 'Y'),
-(3, 39, 'admin', 'Hijab Tutorial Pashmina Instan Rafella Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-pashmina-instan-rafella-original-by-hijab-wanita-cantik', 'N', 'N', 'Y', '<p>Indonesia dinilai perlu belajar dari Brasil dalam pengembangan&nbsp;sektor pertanian. Sebagai negara agraris, perekonomian Brasil saat ini banyak ditopang dari sektor tersebut.</p>\r\n\r\n<p>Menteri Desa, Pembangunan Daerah Tertinggal dan Transmigrasi Eko Putro Sandjojo &lrm;menjelaskan, sebagai negara dengan sumber daya alam (SDA) yang melimpah, Indonesia punya potensi besar untuk menjadi negara agraris terbesar di dunia.&nbsp;&quot;Untuk membicarakan kemandirian pangan Indonesia. Apakah Indonesia bisa menjadi penghasil pangan dunia? Iya. Karena kita dengan lahan terbesar di dunia kedua setelah Brasil,&quot; &lrm;ujar dia di Kantor Kementerian Pertanian.</p>\r\n\r\n<p>Dia menjelaskan, dengan potensi yang besar ini, Indonesia harusnya bisa seperti Brasil yang mampu menjadi negara ekonomi terbesar ke-5 dunia berkat sokongan sektor pertanian.</p>\r\n\r\n<p>&quot;Brazil bisa menjadi negara yang perekonomian&nbsp;kuat nomor 5 di dunia karena bisa memanfaatkan lahan pertanian. Brasil kalau dulu ada inflasi 1.000 persen sekarang maju karena pertanian. Hal ini juga perlu ditiru,&quot; kata dia.&nbsp;Menurut Eko, potensi Indonesia ini juga semakin besar jika bisa memanfaatkan&nbsp;sektor perikanan. Karena sebagaimana diketahui, Indonesia merupakan negara dengan garis pantai&nbsp;</p>\r\n', 'Petani indonesia harus belajar lebih banyak', 'Minggu', '2018-02-18', '10:54:03', 'RV71_27_Jeans_grande.jpg', 0, 'umrah,pupuk-organik,pestisida-nabati,marketing,teknologi', 'Y'),
-(7, 39, 'admin', 'Hijab Tutorial Instan Kaviya Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-kaviya-original-by-hijab-wanita-cantik', 'N', 'N', 'N', '<p>Terdapat dua hal utama yang bisa mendorong terciptanya&nbsp;negara maju. Indonesia akan serius menerapkan dua hal tersebut sehingga ke depan bisa masuk ke dalam kategori negara maju.&nbsp;Menteri Kordinator Bidang Kemaritiman Rizal Ramli ungkap,&nbsp;hal yang pertama yang bisa mendorong sebuah negara masuk kategori maju adalah tingkatan&nbsp;kualitas Sumber Daya Manusia&lrm;&nbsp;(SDM). Selama ini banyak negara maju yang tidak memiliki sumber daya alam, namun karena sumber daya manusia berkualitas maka negara tersebut bisa berkembang.<br />\r\n<br />\r\n&quot;Satu SDM. Negara yang maju tidak punya sumber daya alam, jadi fokus dalam pengembangan SDM. Akhirnya manusia yang terdidik ini, yang&nbsp;<em>educated&nbsp;</em>ini akhirnya mengubah bangsanya,&quot; kataRizal, dalamPressConfrence&nbsp;Rakor Migas, di Kantor Kementerian Kordinator Bidang Kemaritiman,Jakarta, Rabu (11/5/2016).</p>\r\n\r\n<p>Rizal mengakui, Indonesia agak ketinggalan dalam meningkatkan kualitas SDM, karena itu pemerintah akan melakukan transformasi peningkatan kualitas SDM dengan memberikan pendidikan yang lebih spesifik sehingga SDM Indonesia memiliki kemampuan&nbsp;yang sama dengan negara maju.<br />\r\n<br />\r\n&quot;Zaman sekarang zaman Google. Pengetahuan umum bisa didapat dari mana saja, yang penting kemampuan analisa, kemampuan sintesa, kemampuan inovasi dan modifikasi,&quot; ungkap Rizal.</p>\r\n', 'Rizal Ramli kini menjabat sebagai Menteri Koordinator Bidang Kemaritiman', 'Minggu', '2018-02-18', '10:50:24', 'AR96_13_Tartan_Grey_grande.jpg', 0, 'pupuk-organik,marketing,system,bonus,teknologi,nasional', 'Y'),
-(8, 19, 'admin', 'Hijab Tutorial Instan Claire & Clarina Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-claire--clarina-original-by-hijab-wanita-cantik', 'N', 'N', 'N', '<p>Perusahaan BUMN yang bergerak pada sektor peternakan, PT Berdikari (Persero) meresmikan usaha baru yang masih bergerak pada ritel produk daging dan produk olahan daging sapi yaitu Meat Gallery.<br />\r\n<br />\r\nPeluncuran Meat Gallery merupakan salah satu dari rangkaian persiapan Berdikari dalam menciptakan value chain yang terintegrasi yang sebelumnya perusahaan plat merah tersebut telah merevitalisasi<em>&nbsp;ranch breeding</em>&nbsp;di Sulawesi Selatan dan Sulawesi Tenggara, industri penggemukan sapi, rumah potong hewan serta industri daging olahan.<br />\r\n<br />\r\n&quot;Tekad kami untuk memasok kebutuhan daging sapi nasional yang merupakan salah satu sumber protein dengan harga terjangkau,&quot; ujar Direktur Utama PT Berdikari Liberto El Arief di Jakarta, Senin (20/1/2014).&nbsp;Dia mengatakan pada tahun ini, akan dibuka sebanyak 12 cabang Meat Gallery, sedangkan pada tahun depan akan mulai dibuka untuk&nbsp;<em>franchise</em>.<br />\r\n<br />\r\n&nbsp;&quot;Pertama buka di BSD (Bumi Serpong Damai), kemudian disini (kantor pusat) menyusul diseluruh diwilayah&nbsp; Jabodetabek, seperti di Jakarta Timur&nbsp; sedang tahap persiapan, dari situ di awal tahun ini kami membulatkan tekad menjadi BUMN peternakan,&quot; lanjutnya.&nbsp;Menurut Arief, keunggulan Meat Gallery ini karena produk daging maupun produk daging olahan yang dijual berasal dari sapi yang dipelihara sendiri dan dipotong di dalam rumah potong hewan (RPH) yang dikelola sendiri.<br />\r\n<br />\r\n&quot;Sehingga kami menggunakan standar internsional, higienis, proses pendinginan sesuai ketentuan, pembekuannya juga dalam waktu cepat, kualitas kita jamin. Pernah kita tawarkan daging ini ke restoran mereka langsung suka karena beda denga daging impor,&quot; katanya.</p>\r\n', 'Bisnis Ritel untuk Produk Daging', 'Minggu', '2018-02-18', '10:50:12', 'AR91_87_Molly_Grey_grande.jpg', 0, 'peternakan,marketing,system,teknologi,nasional', 'Y'),
-(9, 19, 'admin', 'Hijab Tutorial Pashmina Instan Alifa Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-pashmina-instan-alifa-original-by-hijab-wanita-cantik', 'N', 'N', 'N', '<p>Lahirnya Peraturan Menteri Keuangan (PMK) Nomor 267 Tahun 2015 untuk mengenakan Pajak Pertambahan Nilai (PPN) 10 persen bagi ternak dan pakan ternak impor maupun di dalam negeri menuai banjir protes keras dari kalangan pelaku usaha dan peternak. Dalam beleid ini, hanya sapi indukan yang terbebas dari pungutan pajak.&nbsp; &nbsp;</p>\r\n\r\n<p>Wakil Ketua Kadin Indonesia Bidang Industri Pengolahan Makanan dan Peternakan, Juan Permata Adoe mengungkapkan, bahasa atau substansi dari PMK 267 Tahun 2015, yang menyebutkan PPN 10 persen yang dipungut tidak boleh dikreditkan.</p>\r\n\r\n<p>Itu artinya jika proses dari sapi menjadi daging, dan diproduksi lagi menjadi bakso, maka perusahaan pengolahan daging otomatis dikenakan&nbsp;<em>dobel</em>&nbsp;PPN.</p>\r\n\r\n<p>&quot;Ini yang jadi persoalan, karena dalam menetapkan PMK, pengusaha tidak diajak berdiskusi. PPN bukan menambah daya saing, tapi justru melemahkan daya saing,&quot; ujar dia.</p>\r\n\r\n<p>Juan menuturkan, Kementerian Pertanian sebenarnya meminta kepada Kementerian Keuangan untuk membebaskan bea masuk sapi indukan atau sapi betina produktif, bukan PPN. Tujuannya apabila Bea Masuk dinolkan, maka penjualan sapi jenis ini akan meningkat.</p>\r\n\r\n<p>&quot;Kementan itu inginnya dibebaskan Bea Masuk untuk sapi betina produktif. Tapi dengan alasan tertentu kenapa larinya ke (bebas) PPN, jadi&nbsp;<em>miss interpretasi</em>&nbsp;antara keinginan dan eksekusinya. Untuk ternak lainnya kena PPN 10 persen, otomatis turunannya juga kena,&quot; ujar dia.</p>\r\n', 'Pengusaha Daging sepi Pembeli', 'Minggu', '2018-02-18', '10:50:00', 'AR91_45_Afia_Black_grande.jpg', 2, 'peternakan,marketing,system,nasional', 'Y'),
-(10, 19, 'admin', 'Hijab Tutorial Pashmina Instan Kiyora Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-pashmina-instan-kiyora-original-by-hijab-wanita-cantik', 'N', 'N', 'N', '<p>Pengusaha yang tergabung di Kamar Dagang dan Industri (Kadin) Indonesia meminta pemerintah merevisi aturan mengenai pemberlakuan Pajak Pertambahan Nilai (PPN) 10 persen untuk seluruh ternak, kecuali sapi indukan.</p>\r\n\r\n<p>Lantaran pungutan pajak tersebut akan berdampak besar terhadap produsen, konsumen hingga melemahkan daya saing industri peternakan nasional.</p>\r\n\r\n<p>Wakil Ketua Kadin Indonesia Bidang Industri Pengolahan Makanan dan Peternakan, Juan Permata Adoe mengungkapkan, pemerintah dan pengusaha menggelar rapat koordinasi PMK 267 Tahun 2015 tentang Kriteria Dan/Atau Rincian Ternak, Bahan Pakan Untuk Pembuatan Pakan Ternak dan Pakan Ikan Yang Atas Impor Dan/Atau Penyerahannya Dibebaskan Dari Pengenaan PPN.</p>\r\n\r\n<p>Aturan tersebut merupakan turunan dari Peraturan Pemerintah (PP) Nomor 81 Tahun 2015 tentang Impor dan atau Penyerahan Barang Kena Pajak Tertentu Yang Bersifat Strategis Yang Dibebaskan Dari Pengenaan PPN.&nbsp;Rapat koordinasi ini dihadiri pihak Kementerian Koordinator Bidang Perekonomian, Kementerian Perdagangan, Kementerian Pertanian, Badan Kebijakan Fiskal Kementerian Keuangan, pengusaha termasuk importir dan peternak lokal. Rapat berlangsung di kantor Kemenko Bidang Perekonomian untuk dibawa dalam rakor pangan tingkat Menteri yang dipimpin Menko Perekonomian Darmin Nasution pada pukul 14.00 WIB ini. &nbsp;</p>\r\n', 'Pengusaha Daging Sapi Menjerit', 'Minggu', '2018-02-18', '10:49:49', 'AF_23_6_Best_Of_Black_1024x1024_6e855c30-c2e4-4423-88ac-0f8e9dfeedc4_grande.jpg', 4, 'peternakan,marketing,teknologi,nasional', 'Y'),
-(11, 19, 'admin', 'Hijab Tutorial Instan Rachelia Original by Hijab Wanita Cantik', '', '', 'hijab-tutorial-instan-rachelia-original-by-hijab-wanita-cantik', 'N', 'N', 'N', '<p>Sebagai upaya serius untuk fokus pada bisnis peternakan dan pengolahan daging, PT Berdikari (Persero) akan melakukan importasi sapi betina produktif atau sapi indukan pada tahun ini.&nbsp;Direktur Utama PT Berdikari, Librato El Arief mengatakan, BUMN tersebut akan mulai melakukan impor sapi tersebut pada kuartal II 2014.&nbsp;<br />\r\n<br />\r\n&quot;Tahun ini akan masuk sapi indukan sebanyak&nbsp; 5 ribu ekor, sekitar bulan Mei-Juni, itu akan dikelola di&nbsp;<em>ranch</em>&nbsp;kami di Sulawesi Selatan dan Sulawesi Tenggara,&quot; ujarnya di Kantor Pusat Berdikari, Jakarta Pusat, Senin (20/1/2014).&nbsp;Selain itu, perusahaan plat merah ini juga akan melakukan impor sapi bakalan sebanyak 2 ribu ekor pada kuartal I tahun ini.&nbsp; &quot;Untuk sapi bakalan pada kuartal I ada 2 ribu ekor, kalau tahun lalu 3.500 ekor,&quot; lanjutnya.<br />\r\n<br />\r\nSapi-sapi ini diharapkan akan mampu menambah populasi milik perusahaan tersebut yang mencapai 12 ribu tersebar di wilayah Sulawesi dan Jawa.&nbsp;&quot;Olahan di RPH (rumah potong hewan) miliki kita kapasitasnya 100 ekor per hari, utilisasinya sampai saat ini baru 30%,&quot; katanya.<br />\r\n<br />\r\nSaat ini, PT Berdikari telah memiliki beberapa kandang penggemukan sapi yang tersebar di beberapa wilayah seperti 2 kandang di Jawa Tengah, 2 kandang di Jawa Barat, 1 kandang di Banten dan ada juga beberapa yang sedang dalam tahap perbaikan sebanyak 8 kandang diharapkan mulai beroperasi di pada bulan Mei tahun ini.</p>\r\n', 'Berdikari akan Impor Sapi Indukan', 'Minggu', '2018-02-18', '10:49:44', 'AD_19_20_Misty_Grey_grande.jpg', 15, 'peternakan,marketing,system,nasional', 'Y');
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `download`
+-- Struktur dari tabel `download`
 --
 
 CREATE TABLE `download` (
@@ -110,25 +83,10 @@ CREATE TABLE `download` (
   `hits` int(3) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
---
--- Dumping data for table `download`
---
-
-INSERT INTO `download` (`id_download`, `judul`, `nama_file`, `tgl_posting`, `hits`) VALUES
-(33, 'Rekayasa Teknologi Biota Plus (Hasil Uji Lapangan Sukamandi)', 'Laporan_Penggunaan_Biota_sukamandi.pdf', '2016-05-19', 32),
-(38, 'Marketing Plane System', 'TUNAS_HARMONI_ABADI.pptx', '2016-06-28', 15),
-(35, 'Formulir Pendaftaran Members', 'formulir_pendaftaran.doc', '2016-06-28', 20),
-(36, 'Formulir Pendaftaran Agen', 'formulir_pendaftaran_agen.doc', '2016-06-28', 8),
-(37, 'Formulir Pendaftaran Cabang', 'formulir_pendaftaran_CABANG.doc', '2016-06-28', 10),
-(41, 'Petunjuk cara membayar tabungan ibada', 'NEW_BOOKLET_TUNAS.pptx', '2016-06-29', 9),
-(42, 'Perbandingan pemakaian pupuk biota plus dgn pupuk kimia', 'PERBANDINGAN_PEMUPUKAN-1.doc', '2016-06-29', 7),
-(43, 'Cara pemakaian pupuk biota plus untuk tanaman padi', 'APLIKASI_TEKNOLOGI_BIOTA_PD_TANAMAN_PADI_BALAI_BENIH-1.doc', '2016-06-29', 4),
-(44, 'Promo Alhir Tahun Bali - Lombok', 'img014.jpg', '2016-06-29', 13);
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gallery`
+-- Struktur dari tabel `gallery`
 --
 
 CREATE TABLE `gallery` (
@@ -142,7 +100,7 @@ CREATE TABLE `gallery` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data for table `gallery`
+-- Dumping data untuk tabel `gallery`
 --
 
 INSERT INTO `gallery` (`id_gallery`, `id_album`, `username`, `jdl_gallery`, `gallery_seo`, `keterangan`, `gbr_gallery`) VALUES
@@ -176,7 +134,7 @@ INSERT INTO `gallery` (`id_gallery`, `id_album`, `username`, `jdl_gallery`, `gal
 -- --------------------------------------------------------
 
 --
--- Table structure for table `halamanstatis`
+-- Struktur dari tabel `halamanstatis`
 --
 
 CREATE TABLE `halamanstatis` (
@@ -193,17 +151,17 @@ CREATE TABLE `halamanstatis` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `halamanstatis`
+-- Dumping data untuk tabel `halamanstatis`
 --
 
 INSERT INTO `halamanstatis` (`id_halaman`, `judul`, `judul_seo`, `isi_halaman`, `tgl_posting`, `gambar`, `username`, `dibaca`, `jam`, `hari`) VALUES
-(49, 'Tentang Kami', 'tentang-kami', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>&nbsp;</p>\r\n', '2018-02-18', 'hijab1.jpg', 'admin', 29, '13:44:49', ''),
-(50, 'Cara Belanja', 'cara-belanja', '<p>Selamat datang di Toko Online Hijab Wanita Jawan Now. Demi kenyamanan anda berbelanja, berikut ini kami jelaskan tata cara berbelanja di Toko Online Hijab jaman Now.</p>\r\n\r\n<p><strong>1. Memilih Produk</strong></p>\r\n\r\n<p>Silahkan melihat produk-produk yang tersedia di Hijab Wanita Jawan Now melalui menu&nbsp;<strong>Categories</strong>. Pada produk yang diinginkan, klik tombol &lsquo;<strong>Add to Cart</strong>&rsquo; untuk memasukkannya ke dalam belanjaan anda. Perhatikan jumlah stok yang tersedia untuk produk tersebut.&nbsp;Tambahkan produk lain sesuai keperluan.</p>\r\n\r\n<p><strong>2.Melihat Belanjaan Anda</strong></p>\r\n\r\n<p>Dibagian kanan&nbsp;atas&nbsp;terlihat jumlah item dalam belanjaan dan&nbsp;total nilai pesanan anda. Bila ingin melihat daftar belanjaan lebih detil, arahkan kursor ke gambar keranjang belanja, kemudian klik tombol&nbsp;&#39;<strong>View Cart</strong>&#39;.</p>\r\n\r\n<p><strong>3. Checkout</strong></p>\r\n\r\n<p>Bila produk yang dipilih sudah lengkap dan sesuai, untuk checkout klik tombol &lsquo;<strong>Checkout</strong>&rsquo;.</p>\r\n\r\n<p><strong>4. Checkout Options</strong></p>\r\n\r\n<p>Anda akan diarahkan pada bagian &lsquo;<strong>Checkout Options</strong>&rsquo;. Bila anda sudah terdaftar (<strong>Returning Customer</strong>), silahkan gunakan email dan password anda untuk login. Bila anda belum terdaftar (<strong>New Customer</strong>), silahkan lakukan pendaftaran terlebih dahulu dengan meng-klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>5. Membuat Account</strong></p>\r\n\r\n<p>Bagi anda pelanggan baru, silahkan lengkapi beberapa data berikut. Yang perlu diperhatikan adalah pada saat menuliskan nama&nbsp;<strong>Kecamatan</strong>&nbsp;pada field &#39;<strong>Kecamatan (City)</strong>&#39;. Ketikkan beberapa huruf pertama nama kecamatan, kemudian sistem akan menampilkan pilihan nama kecamatan. Pilih yang paling sesuai. Lengkapi data alamat anda. Klik persetujuan&nbsp;<strong>Privacy Policy</strong>. Klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>6. Cara&nbsp;Pengiriman</strong></p>\r\n\r\n<p>Pada bagian&nbsp;ini anda dapat memilih tarif pengiriman melalui jasa kurir JNE yang sesuai. Jumlah nominal ongkos kirim akan otomatis dihitung sesuai dengan pilihan Kecamatan anda dan juga berat dari pesanan. Tuliskan&nbsp;catatan untuk pesanan anda pada bagian&nbsp;<strong>Comment</strong>, bila&nbsp;ada.&nbsp;Kemudian klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>7. Cara Pembayaran</strong></p>\r\n\r\n<p>Pada bagian&nbsp;ini anda dapat memilih cara pembayaran yang sesuai. Kami saat ini hanya menerima pembayaran melalui<strong>Bank Transfer</strong>.&nbsp;Klik persetujuan&nbsp;<strong>Terms &amp; Conditions</strong>. Klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>8. Konfirmasi Pemesanan</strong></p>\r\n\r\n<p>Pada bagian&nbsp;konfirmasi pemesanan&nbsp;ini anda dapat melihat sekali lagi rincian pesanan anda.&nbsp;Bila sudah tidak ada perubahan, klik tombol &lsquo;<strong>Confirm Order</strong>&rsquo;. Akan ada pesan bahwa pesanan anda sudah diproses dan bersamaan dengan itu kami mengirimkan email berisi&nbsp;rincian&nbsp;pesanan anda.</p>\r\n\r\n<p><strong>9. Pembayaran dan Konfirmasi Pembayaran</strong></p>\r\n\r\n<p>Silahkan lakukan pembayaran pada nomor rekening yang tercantum pada email yang kami kirimkan. Kemudian lakukan konfirmasi pembayaran agar kami dapat segera memproses pengiriman pesanan anda.</p>\r\n\r\n<p>Agar pesanan dapat diproses untuk pengiriman di hari yang sama, konfirmasi pembayaran ditunggu paling lambat jam 15.00 WIB (atau jam 12.00 WIB untuk hari Sabtu). Lewat dari itu diproses untuk pengiriman di hari/kesempatan berikutnya. Hari Minggu/Tanggal Merah, kantor libur dan tidak ada pengiriman.</p>\r\n\r\n<p><strong>10. Pengiriman dan Tracking Pengiriman</strong></p>\r\n\r\n<p>Apabila kami pengiriman telah kami lakukan, status pesanan anda akan diupdate dan kami akan sampaikan juga nomor tracking dari jasa kurir JNE melalui email.</p>\r\n', '2018-02-18', '', 'admin', 44, '13:41:58', '');
+(49, 'Tentang Kami', 'tentang-kami', '', '2021-06-23', 'Merah_Muda_Biru_Tua_Ikon_Infografik_Resume.png', 'admin', 7, '11:42:31', ''),
+(50, 'Cara Belanja', 'cara-belanja', '<p><strong>Selamat datang di Toko Online Hijab.Style. Demi kenyamanan anda berbelanja, berikut ini kami jelaskan tata cara berbelanja di Toko Online Hijab.Style.</strong></p>\r\n\r\n<p><strong>1. Memilih Produk</strong></p>\r\n\r\n<p>Silahkan melihat produk-produk yang tersedia di Hijab Style&nbsp;melalui menu&nbsp;<strong>Categories</strong>. Pada produk yang diinginkan, klik tombol &lsquo;<strong>Add to Cart</strong>&rsquo; untuk memasukkannya ke dalam belanjaan anda. Perhatikan jumlah stok yang tersedia untuk produk tersebut.&nbsp;Tambahkan produk lain sesuai keperluan.</p>\r\n\r\n<p><strong>2. Melihat Belanjaan Anda</strong></p>\r\n\r\n<p>Dibagian kanan&nbsp;atas&nbsp;terlihat jumlah item dalam belanjaan dan&nbsp;total nilai pesanan anda. Bila ingin melihat daftar belanjaan lebih detil, arahkan kursor ke gambar keranjang belanja, kemudian klik tombol&nbsp;&#39;<strong>View Cart</strong>&#39;.</p>\r\n\r\n<p><strong>3. Checkout</strong></p>\r\n\r\n<p>Bila produk yang dipilih sudah lengkap dan sesuai, untuk checkout klik tombol &lsquo;<strong>Checkout</strong>&rsquo;.</p>\r\n\r\n<p><strong>4. Checkout Options</strong></p>\r\n\r\n<p>Anda akan diarahkan pada bagian &lsquo;<strong>Checkout Options</strong>&rsquo;. Bila anda sudah terdaftar (<strong>Returning Customer</strong>), silahkan gunakan email dan password anda untuk login. Bila anda belum terdaftar (<strong>New Customer</strong>), silahkan lakukan pendaftaran terlebih dahulu dengan meng-klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>5. Membuat Account</strong></p>\r\n\r\n<p>Bagi anda pelanggan baru, silahkan lengkapi beberapa data berikut. Yang perlu diperhatikan adalah pada saat menuliskan nama&nbsp;<strong>Kecamatan</strong>&nbsp;pada field &#39;<strong>Kecamatan (City)</strong>&#39;. Ketikkan beberapa huruf pertama nama kecamatan, kemudian sistem akan menampilkan pilihan nama kecamatan. Pilih yang paling sesuai. Lengkapi data alamat anda. Klik persetujuan&nbsp;<strong>Privacy Policy</strong>. Klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>6. Cara&nbsp;Pengiriman</strong></p>\r\n\r\n<p>Pada bagian&nbsp;ini anda dapat memilih tarif pengiriman melalui jasa kurir JNE yang sesuai. Jumlah nominal ongkos kirim akan otomatis dihitung sesuai dengan pilihan Kecamatan anda dan juga berat dari pesanan. Tuliskan&nbsp;catatan untuk pesanan anda pada bagian&nbsp;<strong>Comment</strong>, bila&nbsp;ada.&nbsp;Kemudian klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>7. Cara Pembayaran</strong></p>\r\n\r\n<p>Pada bagian&nbsp;ini anda dapat memilih cara pembayaran yang sesuai. Kami saat ini hanya menerima pembayaran melalui<strong>Bank Transfer</strong>.&nbsp;Klik persetujuan&nbsp;<strong>Terms &amp; Conditions</strong>. Klik tombol &lsquo;<strong>Continue</strong>&rsquo;.</p>\r\n\r\n<p><strong>8. Konfirmasi Pemesanan</strong></p>\r\n\r\n<p>Pada bagian&nbsp;konfirmasi pemesanan&nbsp;ini anda dapat melihat sekali lagi rincian pesanan anda.&nbsp;Bila sudah tidak ada perubahan, klik tombol &lsquo;<strong>Confirm Order</strong>&rsquo;. Akan ada pesan bahwa pesanan anda sudah diproses dan bersamaan dengan itu kami mengirimkan email berisi&nbsp;rincian&nbsp;pesanan anda.</p>\r\n\r\n<p><strong>9. Pembayaran dan Konfirmasi Pembayaran</strong></p>\r\n\r\n<p>Silahkan lakukan pembayaran pada nomor rekening yang tercantum pada email yang kami kirimkan. Kemudian lakukan konfirmasi pembayaran agar kami dapat segera memproses pengiriman pesanan anda.</p>\r\n\r\n<p>Agar pesanan dapat diproses untuk pengiriman di hari yang sama, konfirmasi pembayaran ditunggu paling lambat jam 15.00 WIB (atau jam 12.00 WIB untuk hari Sabtu). Lewat dari itu diproses untuk pengiriman di hari/kesempatan berikutnya. Hari Minggu/Tanggal Merah, kantor libur dan tidak ada pengiriman.</p>\r\n\r\n<p><strong>10. Pengiriman dan Tracking Pengiriman</strong></p>\r\n\r\n<p>Apabila kami pengiriman telah kami lakukan, status pesanan anda akan diupdate dan kami akan sampaikan juga nomor tracking dari jasa kurir JNE melalui email.</p>\r\n', '2021-06-23', '', 'admin', 9, '11:02:38', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hubungi`
+-- Struktur dari tabel `hubungi`
 --
 
 CREATE TABLE `hubungi` (
@@ -217,19 +175,10 @@ CREATE TABLE `hubungi` (
   `dibaca` enum('Y','N') COLLATE latin1_general_ci NOT NULL DEFAULT 'N'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
---
--- Dumping data for table `hubungi`
---
-
-INSERT INTO `hubungi` (`id_hubungi`, `nama`, `email`, `subjek`, `pesan`, `tanggal`, `jam`, `dibaca`) VALUES
-(34, 'Landung Trilaksono', 'landungtrilaksono@gmail.com', 'Nomer kontak jurusan akuntansi', 'Maaf saya mau hubungi jurusan akuntansi di nomer berapa ya? Terima kasih', '2013-10-16', '00:00:00', 'Y'),
-(35, 'yusri renor', 'aciafifah@gmail.com', 'pertanyaan', 'bagaimana cara mengunduh nomor ujian fak. pertanian', '2014-01-19', '00:00:00', 'Y'),
-(38, 'Udin Sedunia', 'udin.sedunia@gmail.com', 'Ip Pengirim : 120.177.28.244', 'Silahkan menghubungi kami melalui private message melalui form yang berada pada bagian kanan halaman ini. Kritik dan saran Anda sangat penting bagi kami untuk terus meningkatkan kualitas produk dan layanan yang kami berikan kepada Anda.', '2015-06-02', '00:00:00', 'Y');
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `identitas`
+-- Struktur dari tabel `identitas`
 --
 
 CREATE TABLE `identitas` (
@@ -249,16 +198,16 @@ CREATE TABLE `identitas` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `identitas`
+-- Dumping data untuk tabel `identitas`
 --
 
 INSERT INTO `identitas` (`id_identitas`, `nama_website`, `email`, `url`, `facebook`, `rekening`, `no_telp`, `kota_id`, `alamat`, `meta_deskripsi`, `meta_keyword`, `favicon`, `maps`) VALUES
-(1, 'Hijab Wanita Jaman Now', '401xdssh@gmail.com', 'http://www.401xd.com', '', '0987654321', 'Telp. 0987654321 - Fax. 0411 431111', 442, 'Jl. Pancasila, Koto Panap, Tanah Kampung', 'Menyajikan produk terbaik, tekini, tercepat, dan terpercaya.', 'Ada banyak produk disini yang bisa memberikan komisi kepada Anda setiap terjadi penjualan. Dan produk ini akan terus bertambah dari waktu ke waktu. Jadi, sekali Anda bergabung di phpmu.com, Anda punya kesempatan berbisnis tanpa modal, juga peng', 'favicon.ico', 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3989.3358607198243!2d100.35483479999999!3d-0.8910373999999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4b8aa1a4e0441%3A0x3f81ebb48d31a38b!2sTunggul+Hitam%2C+Padang+Utara%2C+Kota+Padang%2C+Sumatera+Barat+25173!5e0!3m2!1sid!2sid!4v1408275531365');
+(1, 'Hijab.Style', 'Hijab.Style@gmail.com', 'http://www.401xd.com', '', '0987654321', 'Telp. 0987654321 ', 342, 'Jalan Selokambang, Gununggangsir, Gunung Gangsir, Pasuruan, Jawa Timur', 'Menyajikan produk terbaik, tekini, dan terpercaya.', 'Ada banyak produk hijab yang menarik untuk anda', 'Hijab_Style.png', 'https://www.google.com/maps/place/Jl.+Selokambang,+Gununggangsir,+Gn.+Gangsir,+Kec.+Beji,+Pasuruan,+Jawa+Timur/@-7.5834703,112.7278996,17z/data=!3m1!4b1!4m5!3m4!1s0x2dd7dc0f26b710e7:0xdf3638f831c2db93!8m2!3d-7.5834756!4d112.7300883');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `iklantengah`
+-- Struktur dari tabel `iklantengah`
 --
 
 CREATE TABLE `iklantengah` (
@@ -273,7 +222,7 @@ CREATE TABLE `iklantengah` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategori`
+-- Struktur dari tabel `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -285,21 +234,10 @@ CREATE TABLE `kategori` (
   `sidebar` int(10) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
---
--- Dumping data for table `kategori`
---
-
-INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `username`, `kategori_seo`, `aktif`, `sidebar`) VALUES
-(55, 'mlm', 'admin', 'mlm', 'Y', 0),
-(39, 'Pertanian', '', 'pertanian', 'Y', 1),
-(23, 'Perikanan', '', 'perikanan', 'Y', 3),
-(2, 'Wisata', '', 'wisata', 'Y', 4),
-(19, 'Peternakan', '', 'peternakan', 'Y', 2);
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `logo`
+-- Struktur dari tabel `logo`
 --
 
 CREATE TABLE `logo` (
@@ -308,16 +246,16 @@ CREATE TABLE `logo` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data for table `logo`
+-- Dumping data untuk tabel `logo`
 --
 
 INSERT INTO `logo` (`id_logo`, `gambar`) VALUES
-(15, 'logo1.png');
+(15, 'logo12.png');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `menu`
+-- Struktur dari tabel `menu`
 --
 
 CREATE TABLE `menu` (
@@ -331,20 +269,16 @@ CREATE TABLE `menu` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `menu`
+-- Dumping data untuk tabel `menu`
 --
 
 INSERT INTO `menu` (`id_menu`, `id_parent`, `nama_menu`, `link`, `aktif`, `position`, `urutan`) VALUES
 (143, 0, 'Konfirmasi', 'konfirmasi', 'Ya', 'Bottom', 24),
 (113, 146, 'Tentang Kami', 'page/detail/tentang-kami', 'Ya', 'Bottom', 1),
 (7, 0, 'Beranda', '', 'Ya', 'Bottom', 1),
-(8, 146, 'Hijab Tutorial', 'berita', 'Ya', 'Bottom', 3),
 (136, 0, 'Login', 'auth/login', 'Ya', 'Top', 15),
 (137, 0, 'Register', 'auth/register', 'Ya', 'Top', 16),
 (138, 0, 'Hubungi Kami', 'contact', 'Ya', 'Top', 17),
-(139, 0, 'Download', 'download', 'Tidak', 'Bottom', 18),
-(140, 0, 'Video', 'video', 'Tidak', 'Bottom', 19),
-(141, 0, 'Gallery', 'gallery', 'Tidak', 'Bottom', 20),
 (142, 0, 'Testimoni', 'testimoni', 'Ya', 'Bottom', 22),
 (144, 0, 'Semua Koleksi', 'produk', 'Ya', 'Bottom', 3),
 (145, 146, 'Cara Belanja', 'page/detail/cara-belanja', 'Ya', 'Bottom', 2),
@@ -354,7 +288,7 @@ INSERT INTO `menu` (`id_menu`, `id_parent`, `nama_menu`, `link`, `aktif`, `posit
 -- --------------------------------------------------------
 
 --
--- Table structure for table `modul`
+-- Struktur dari tabel `modul`
 --
 
 CREATE TABLE `modul` (
@@ -372,17 +306,15 @@ CREATE TABLE `modul` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data for table `modul`
+-- Dumping data untuk tabel `modul`
 --
 
 INSERT INTO `modul` (`id_modul`, `nama_modul`, `username`, `link`, `static_content`, `gambar`, `publish`, `status`, `aktif`, `urutan`, `link_seo`) VALUES
 (2, 'Manajemen User', 'admin', 'manajemenuser', '', '', 'Y', 'user', 'Y', 0, ''),
-(18, 'Berita', 'admin', 'listberita', '', '', 'Y', 'user', 'Y', 0, ''),
 (71, 'Image Slider', 'admin', 'imagesslider', '', '', 'N', 'admin', 'N', 0, ''),
 (10, 'Manajemen Modul', 'admin', 'manajemenmodul', '', '', 'Y', 'user', 'Y', 0, ''),
 (31, 'Kategori Berita ', 'admin', 'kategoriberita', '', '', 'Y', 'user', 'Y', 0, ''),
 (33, 'Testimoni', 'admin', 'testimoni', '', '', 'Y', 'user', 'Y', 0, ''),
-(34, 'Tag Berita', 'admin', 'tagberita', '', '', 'Y', 'user', 'Y', 0, ''),
 (43, 'Berita Foto', 'admin', 'album', '', '', 'Y', 'user', 'Y', 0, ''),
 (44, 'Galeri Berita Foto', 'admin', 'gallery', '', '', 'Y', 'user', 'Y', 0, ''),
 (46, 'Konsumen', 'admin', 'konsumen', '', '', 'Y', 'user', 'Y', 0, ''),
@@ -394,14 +326,13 @@ INSERT INTO `modul` (`id_modul`, `nama_modul`, `username`, `link`, `static_conte
 (68, 'Iklan Home', 'admin', 'iklanhome', '', '', 'N', 'admin', 'N', 0, ''),
 (70, 'Pesan Masuk', 'admin', 'pesanmasuk', '', '', 'Y', 'user', 'Y', 0, ''),
 (72, 'No Rekening Perusahaan', 'admin', 'rekening', '', '', 'N', 'admin', 'N', 0, ''),
-(74, 'Download Area', 'admin', 'download', '', '', 'Y', 'admin', 'Y', 0, ''),
 (75, 'Alamat Kontak', 'admin', 'alamat', '', '', 'Y', 'admin', 'Y', 0, ''),
 (78, 'Info/Keterangan', 'admin', 'keterangan', '', '', 'Y', 'user', 'Y', 0, '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pasangiklan`
+-- Struktur dari tabel `pasangiklan`
 --
 
 CREATE TABLE `pasangiklan` (
@@ -413,18 +344,10 @@ CREATE TABLE `pasangiklan` (
   `tgl_posting` date NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
---
--- Dumping data for table `pasangiklan`
---
-
-INSERT INTO `pasangiklan` (`id_pasangiklan`, `judul`, `username`, `url`, `gambar`, `tgl_posting`) VALUES
-(32, 'Temukan juga kami di Tokopedia', 'admin', 'https://www.tokopedia.com', 'tokopedia1.png', '2018-03-04'),
-(33, 'Temukan juga kami di Bukalapak', 'admin', 'https://www.bukalapak.com', 'download.png', '2018-03-04');
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rb_kategori_produk`
+-- Struktur dari tabel `rb_kategori_produk`
 --
 
 CREATE TABLE `rb_kategori_produk` (
@@ -434,24 +357,31 @@ CREATE TABLE `rb_kategori_produk` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `rb_kategori_produk`
+-- Dumping data untuk tabel `rb_kategori_produk`
 --
 
 INSERT INTO `rb_kategori_produk` (`id_kategori_produk`, `nama_kategori`, `kategori_seo`) VALUES
-(1, 'Hijab Instan Annisa', 'hijab-instan-annisa'),
-(2, 'Hijab Instan Kiyora', 'hijab-instan-kiyora'),
-(4, 'Hijab Instan Ladiza', 'hijab-instan-ladiza'),
-(5, 'Hijab Instan Kezya', 'hijab-instan-kezya'),
-(6, 'Hijab Instan Tanika', 'hijab-instan-tanika'),
-(7, 'Segitiga Instan Lolina', 'segitiga-instan-lolina'),
-(8, 'Segitiga Instan Sasya', 'segitiga-instan-sasya'),
-(9, 'Pashmina Instan Raisa Lava', 'pashmina-instan-raisa-lava'),
-(10, 'Pashmina Instan Tafea', 'pashmina-instan-tafea');
+(1, 'Manset Leher', 'manset-leher'),
+(2, 'Pashmina Ceruty Emboss', 'pashmina-ceruty-emboss'),
+(4, 'Ciput Ninja Resleting', 'ciput-ninja-resleting'),
+(5, 'Segi Empat Bella Square', 'segi-empat-bella-square'),
+(6, 'Inner Basic', 'inner-basic'),
+(7, 'Pashmina Square', 'pashmina-square'),
+(8, 'Pashmina Ceruty Babydoll', 'pashmina-ceruty-babydoll'),
+(9, 'Bergo Maryam', 'bergo-maryam'),
+(10, 'Pashmina Plisket', 'pashmina-plisket'),
+(11, 'Pashmina Tali Ceruty', 'pashmina-tali-ceruty'),
+(12, 'Pashmina Diamond', 'pashmina-diamond'),
+(13, 'Pashmina Crinckle Full Rawis', 'pashmina-crinckle-full-rawis'),
+(14, 'Segi Empat Lasercut', 'segi-empat-lasercut'),
+(15, 'Hijab Syar\'i Instan', 'hijab-syari-instan'),
+(16, 'Inner Rajut', 'inner-rajut'),
+(17, 'Aksesoris ', 'aksesoris-');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rb_keterangan`
+-- Struktur dari tabel `rb_keterangan`
 --
 
 CREATE TABLE `rb_keterangan` (
@@ -461,16 +391,16 @@ CREATE TABLE `rb_keterangan` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `rb_keterangan`
+-- Dumping data untuk tabel `rb_keterangan`
 --
 
 INSERT INTO `rb_keterangan` (`id_keterangan`, `keterangan`, `tanggal_posting`) VALUES
-(1, '<p><strong>Informasi Order :</strong></p>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis.&nbsp;</p>\r\n\r\n<p>Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n', '2018-03-03');
+(1, '<p><strong>Informasi Order :</strong></p>\r\n\r\n<ul>\r\n	<li>Silahkan klik lanjut belanja jika anda ingin Memilih produk lainnya</li>\r\n	<li>Silahkan klik selesai belanja untuk anda menyelesaikan belanjaan anda</li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p style=\"text-align:center\"><strong>Terimakasih, Happy Shopping</strong></p>\r\n', '2021-06-23');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rb_konfirmasi`
+-- Struktur dari tabel `rb_konfirmasi`
 --
 
 CREATE TABLE `rb_konfirmasi` (
@@ -485,7 +415,7 @@ CREATE TABLE `rb_konfirmasi` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `rb_konfirmasi`
+-- Dumping data untuk tabel `rb_konfirmasi`
 --
 
 INSERT INTO `rb_konfirmasi` (`id_konfirmasi_pembayaran`, `id_penjualan`, `total_transfer`, `id_rekening`, `nama_pengirim`, `tanggal_transfer`, `bukti_transfer`, `waktu_konfirmasi`) VALUES
@@ -497,12 +427,19 @@ INSERT INTO `rb_konfirmasi` (`id_konfirmasi_pembayaran`, `id_penjualan`, `total_
 (8, 2, 'Rp 417,000', 2, 'Robby Prihandaya', '2018-03-03', 'avatar.png', '2018-03-03 16:16:37'),
 (9, 17, 'Rp 65,037', 1, 'pembeli', '2020-10-12', 'favicon.png', '2020-10-12 02:07:14'),
 (10, 17, 'Rp 65,037', 1, 'pembeli', '2020-10-12', 'favicon1.png', '2020-10-12 02:07:29'),
-(11, 18, 'Rp 840,950', 1, 'pembeli', '2020-10-12', 'favicon2.png', '2020-10-12 02:51:33');
+(11, 18, 'Rp 840,950', 1, 'pembeli', '2020-10-12', 'favicon2.png', '2020-10-12 02:51:33'),
+(12, 22, 'Rp 99,215', 1, 'Shindi Fatika Sari', '2021-06-21', '7.jpeg', '2021-06-21 14:33:15'),
+(13, 22, 'Rp 99,215', 1, 'Shindi Fatika Sari', '2021-06-21', 'API_Volley3.jpg', '2021-06-21 14:33:43'),
+(14, 27, 'Rp 33,444', 2, 'Shindi Fatika Sari', '2021-06-23', 'Hijab_Style.png', '2021-06-23 10:55:47'),
+(15, 28, 'Rp 55,150', 1, 'Vivalvia', '2021-06-23', 'Merah_Muda_Biru_Tua_Ikon_Infografik_Resume.png', '2021-06-23 12:22:39'),
+(16, 31, 'Rp 26,942', 1, 'Vivalvia', '2021-06-23', 'Hijab_Style1.png', '2021-06-23 12:30:16'),
+(17, 39, 'Rp 43,919', 1, 'Shindi Fatika Sari', '2021-07-20', '0001-12383466291_20201028_105633_0000.png', '2021-07-20 14:17:24'),
+(18, 42, 'Rp 18,158', 2, 'Shindi Fatika Sari', '2021-07-20', '', '2021-07-20 15:02:58');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rb_konsumen`
+-- Struktur dari tabel `rb_konsumen`
 --
 
 CREATE TABLE `rb_konsumen` (
@@ -522,30 +459,20 @@ CREATE TABLE `rb_konsumen` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `rb_konsumen`
+-- Dumping data untuk tabel `rb_konsumen`
 --
 
 INSERT INTO `rb_konsumen` (`id_konsumen`, `username`, `password`, `nama_lengkap`, `email`, `jenis_kelamin`, `tanggal_lahir`, `tempat_lahir`, `alamat_lengkap`, `kota_id`, `no_hp`, `foto`, `tanggal_daftar`) VALUES
-(1, 'robby', '882c306525a9f885466520ba2aa6b10377b029cb569311fc17161d40df6e1bab7eb6103fcf567ce3a1375e77cc7db1928efec90cd0a379303fc2adb159bb1d14', 'Robby Prihandaya', 'robby.prihandaya@gmail.com', 'Laki-laki', '1988-08-07', 'Padang', 'Jl. Angkasa Pura Jaya Merdeka', 372, '081267771341', 'robby1.jpg', '2017-04-05'),
-(2, 'arsenio', 'ddd1e1ecf9826e4ae7aba6ebd09589d65880638f984357aa688cf265fbc8b3e8781ca573d27c13cafc99e4db9d5c38801bd270df6f0bf6d18cd877fefb159f6f', 'Muhammad Arsenio', 'muhammad.arsenio@gmail.com', 'Laki-laki', '1988-09-27', 'Padang', 'jl. Siti Nurbayani Sogi roh', 0, '081267889912', '', '2017-04-07'),
-(3, 'dewiit', 'af9f95fb734ca6abb2d02a6a169eca2bbf33feb3c25ed266e4129cbed937150699954d72dcb44fee7c9e9acebaf4e7283aabc64a6e56f1b8e6a5a0e8e0551324', 'Dewiit Safitri', 'dewiitt.safitri@gmail.com', 'Perempuan', '1989-06-16', 'Padang', 'Jl. Linggar Jati Lamo', 372, '098912334456', '', '2017-04-08'),
-(4, 'cristine', '284e703a4d52451e1266b16660e50545e58bc0d4796587cb457e49cccd10af4d4ef6cf36d076a91002d806f443e0fb22b9391d81092d06a90252ec80b93a1269', 'Cristine Hakim', 'cristine.hakim@gmail.com', 'Perempuan', '1970-06-16', 'Padang', 'jl. Pondok Raya Begalung', 0, '097712445600', '', '2017-04-09'),
-(5, 'tommy', 'e3bb0d1fb8d4d0aa070f22a9f73c975222449bb5466dc89033f66a8be07d6e8345308aa298e78066871c6844964e6b63f7be4327525c5025001c76b94310e2f2', 'Tommu Utama', 'tommy.utama@gmail.com', 'Laki-laki', '1985-08-18', 'Padang', 'Jl Cendrawasih Mujukirte', 0, '081267881233', '', '2017-04-10'),
-(6, 'willy', '181676ffcb279fc91cfb9cb5f07be65b23224b05059f9f2ff0158aa520693a805496be090242c3cdf56c0463f278aba4b01c7115ea356eda346ef8270e402696', 'Willy Fernando', 'willy.fernando@gmail.com', 'Laki-laki', '1969-08-14', 'Padang', 'Jl. Angkasa Puri, Perundam 4', 0, '087811235433', '', '2017-04-11'),
-(7, 'rosanna', '108b1016c8dfa4c6892fd745c09adc4859cd2e21ca3d55a30322ef667011aa3c379c02a45437fd6482555c17aab7f607e13b8431e19678a00a51edec958a9569', 'Rosanna Alexandro', 'rosanna.alexandro@gmail.com', 'Perempuan', '1967-04-17', 'Padang', 'Jl. Mantaliano Tubelegio', 0, '081242342341', '', '2017-04-10'),
-(18, 'laura', 'ca946a52760d2c5e2670aa899019f09638e72462d8a9ff272dffb16d14e3873457ce6be0a3ecf205fdb0c8141bbe560b01240f1f1307e31b231cb18428ec5974', 'Laura Izzatin Nissa', 'laura.izzatin@gmail.com', 'Perempuan', '1998-02-12', 'Padang Panjang', 'Tunggul Hitam, Padang', 0, '082175123545', '', '2017-05-29'),
-(24, 'rahmi', 'a6023aa2be2f8d9bb61edd627f957882c7a28abbbc1ed61b9cd93c36c06e52270396fcaa6303b341f52937432faa91ecbaea99534a1f55866ba3163389fcbfbf', 'Rahmi Saputra', 'rahmi.saputra@gmail.com', 'Laki-laki', '1989-12-12', 'Payakumbuh', 'Jl. Kijoko Bodoh', 370, '081978541155', '', '2017-06-07'),
-(23, 'agusr', 'b87fb1f4862c52a175281636b0c270276e50e33e3aec4929c31da5199ca83ff25c0d045f9eb03b2e6dca41a390164a8c95c29bd28139cef18499c0d2ae59e098', 'Agus Raharjo', 'agus.raharjo@gmail.com', 'Laki-laki', '2018-03-20', 'Padang', 'Jl. Sutimah warohmah Jaya', 371, '081267991244', '', '2017-06-07'),
-(27, 'tommy', 'e3bb0d1fb8d4d0aa070f22a9f73c975222449bb5466dc89033f66a8be07d6e8345308aa298e78066871c6844964e6b63f7be4327525c5025001c76b94310e2f2', 'Tommy Utama', 'tommy.utama@gmail.com', 'Laki-laki', '0000-00-00', '', 'Jl. Singgasana, Buleleng', 6, '081267771388', '', '2018-03-05'),
-(25, 'dewiit', 'af9f95fb734ca6abb2d02a6a169eca2bbf33feb3c25ed266e4129cbed937150699954d72dcb44fee7c9e9acebaf4e7283aabc64a6e56f1b8e6a5a0e8e0551324', 'Dewiit Safitri', 'dewiit.safitri@gmail.com', 'Laki-laki', '2018-03-17', 'Padang', 'Jl. Linggar Jati, No 16 C', 5, '082173054501', '', '2018-03-03'),
-(26, 'arsenio', 'ddd1e1ecf9826e4ae7aba6ebd09589d65880638f984357aa688cf265fbc8b3e8781ca573d27c13cafc99e4db9d5c38801bd270df6f0bf6d18cd877fefb159f6f', 'Muhammad Arsenio', 'muhammad.arsenio@gmail.com', 'Laki-laki', '2016-12-15', 'Padang', 'Jl. Linggar Jati, No 18 C', 9, '082156458899', '', '2018-03-03'),
-(28, 'sdfsdf', '8fdc5505d48f88bed9da7b8b146bbffd1bee25cdb940876a50642459fe336170636fcaec4d7c0e30b0388888628853457479fcdf08b5ea331f78a3886ed7a3ed', 'asdasdasdasd', 'todaynews.co.id@gmail.com', 'Laki-laki', '0000-00-00', '', 'sfsdfsdfdsfsd', 15, '3452342234', '', '2018-03-05'),
-(29, 'pembeli', '8880e718ebd94c737f18cbf083c9adc733b01d5f030ed5b87bd3d103ac84781f194bd64d11070c58b97c0f07202d69711aa336b859a1a010f89f8c44de609261', 'pembeli', 'pembeli@gmail.com', 'Laki-laki', '2020-10-12', '-', 'Sungaipenuh, jambi', 442, '082365128734', 'favicon2.png', '2020-10-12');
+(40, 'shindi', '3e39b3844837bdefc8017fbcb386ea302af877fb17baa09d0a1bd34b67bbf2b34fba314bbcab450f5f3f73771b7aea956ba3320defda029723f4fdff7dfa007b', 'Shindi Fatika Sari', 'fatikashindi@gmail.com', 'Perempuan', '2001-01-01', 'Jombang', 'Dusun Jogoloyo RT 001/RW 003, Desa Jogoloyo, Sumobito, Jombang', 164, '085278456764', '', '2021-06-22'),
+(39, 'zalfa', '3e39b3844837bdefc8017fbcb386ea302af877fb17baa09d0a1bd34b67bbf2b34fba314bbcab450f5f3f73771b7aea956ba3320defda029723f4fdff7dfa007b', 'Adya Zalfa', 'adyazalfa31@gmail.com', 'Perempuan', '2021-06-22', '-', 'Jember', 160, '0875279165378', '', '2021-06-22'),
+(41, 'vivalvia', '3e39b3844837bdefc8017fbcb386ea302af877fb17baa09d0a1bd34b67bbf2b34fba314bbcab450f5f3f73771b7aea956ba3320defda029723f4fdff7dfa007b', 'Vivalvia', 'vivalvia24@gmail.com', 'Perempuan', '2000-06-22', '-', 'sidoarjo', 409, '0897645675', '', '2021-06-22'),
+(42, 'firda', '3e39b3844837bdefc8017fbcb386ea302af877fb17baa09d0a1bd34b67bbf2b34fba314bbcab450f5f3f73771b7aea956ba3320defda029723f4fdff7dfa007b', 'Nurul Amaliyah', 'Firda@gmail.com', 'Perempuan', '2021-06-22', '-', 'Bangil', 343, '08765688625', '', '2021-06-22'),
+(43, 'salsa', '3e39b3844837bdefc8017fbcb386ea302af877fb17baa09d0a1bd34b67bbf2b34fba314bbcab450f5f3f73771b7aea956ba3320defda029723f4fdff7dfa007b', 'Salsabila', 'salsa@gmail.com', 'Perempuan', '2021-07-20', '09-09-00', 'Gubeng Surabaya', 444, '087567545786', '', '2021-07-20');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rb_kota`
+-- Struktur dari tabel `rb_kota`
 --
 
 CREATE TABLE `rb_kota` (
@@ -555,7 +482,7 @@ CREATE TABLE `rb_kota` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `rb_kota`
+-- Dumping data untuk tabel `rb_kota`
 --
 
 INSERT INTO `rb_kota` (`kota_id`, `provinsi_id`, `nama_kota`) VALUES
@@ -1064,7 +991,7 @@ INSERT INTO `rb_kota` (`kota_id`, `provinsi_id`, `nama_kota`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rb_pembelian`
+-- Struktur dari tabel `rb_pembelian`
 --
 
 CREATE TABLE `rb_pembelian` (
@@ -1075,7 +1002,7 @@ CREATE TABLE `rb_pembelian` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `rb_pembelian`
+-- Dumping data untuk tabel `rb_pembelian`
 --
 
 INSERT INTO `rb_pembelian` (`id_pembelian`, `kode_pembelian`, `id_supplier`, `waktu_beli`) VALUES
@@ -1084,12 +1011,12 @@ INSERT INTO `rb_pembelian` (`id_pembelian`, `kode_pembelian`, `id_supplier`, `wa
 (3, 'PO-0003', 1, '2017-05-27 14:58:50'),
 (5, 'PO-0004', 1, '2017-05-30 09:30:02'),
 (6, 'PO-0005', 1, '2017-06-01 10:29:39'),
-(7, 'PO-00011', 1, '2018-03-03 17:21:47');
+(7, 'PO-0006', 3, '2018-03-03 17:21:47');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rb_pembelian_detail`
+-- Struktur dari tabel `rb_pembelian_detail`
 --
 
 CREATE TABLE `rb_pembelian_detail` (
@@ -1102,7 +1029,7 @@ CREATE TABLE `rb_pembelian_detail` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `rb_pembelian_detail`
+-- Dumping data untuk tabel `rb_pembelian_detail`
 --
 
 INSERT INTO `rb_pembelian_detail` (`id_pembelian_detail`, `id_pembelian`, `id_produk`, `harga_pesan`, `jumlah_pesan`, `satuan`) VALUES
@@ -1114,7 +1041,7 @@ INSERT INTO `rb_pembelian_detail` (`id_pembelian_detail`, `id_pembelian`, `id_pr
 (7, 3, 2, 3000000, 43, 'pcs'),
 (12, 5, 6, 320000, 25, 'unit'),
 (13, 5, 5, 6990000, 10, 'unit'),
-(14, 5, 4, 1000000, 45, 'unit'),
+(14, 5, 4, 1000000, 80, 'unit'),
 (16, 6, 13, 45900, 16, 'pcs'),
 (17, 6, 12, 490000, 12, 'unit'),
 (18, 6, 11, 8299000, 10, 'pcs'),
@@ -1123,12 +1050,43 @@ INSERT INTO `rb_pembelian_detail` (`id_pembelian_detail`, `id_pembelian`, `id_pr
 (21, 6, 7, 879000, 11, 'unit'),
 (22, 6, 3, 14998000, 1, 'unit'),
 (23, 7, 1, 60000, 2, 'pcs'),
-(24, 7, 2, 340000, 4, 'pcs');
+(24, 7, 2, 340000, 4, 'pcs'),
+(25, 6, 39, 12000, 15, 'pcs'),
+(26, 7, 38, 12000, 10, 'pcs'),
+(27, 6, 37, 26000, 8, 'pcs'),
+(28, 1, 34, 13000, 12, 'pcs'),
+(29, 1, 35, 13000, 22, 'pcs'),
+(30, 1, 36, 13000, 12, 'pcs'),
+(31, 2, 33, 16000, 30, 'pcs'),
+(32, 2, 32, 10000, 20, 'pcs'),
+(33, 2, 31, 32000, 26, 'pcs'),
+(34, 2, 29, 22000, 23, 'pcs'),
+(35, 2, 30, 22000, 28, 'pcs'),
+(36, 1, 28, 20000, 24, 'pcs'),
+(37, 1, 26, 28000, 32, 'pcs'),
+(38, 1, 27, 28000, 30, 'pcs'),
+(39, 7, 25, 26000, 14, 'pcs'),
+(40, 7, 24, 24000, 20, 'pcs'),
+(41, 7, 19, 22000, 20, 'pcs'),
+(42, 7, 20, 22000, 18, 'pcs'),
+(43, 7, 21, 22000, 23, 'pcs'),
+(44, 7, 22, 22000, 26, 'pcs'),
+(45, 7, 23, 22000, 25, 'pcs'),
+(46, 7, 5, 22000, 32, 'pcs'),
+(47, 7, 4, 22000, 23, 'pcs'),
+(48, 7, 3, 22000, 21, 'pcs'),
+(49, 7, 2, 22000, 27, 'pcs'),
+(50, 7, 1, 22000, 28, 'pcs'),
+(51, 7, 17, 22000, 31, 'pcs'),
+(52, 7, 18, 22000, 28, 'pcs'),
+(53, 7, 10, 25000, 19, 'pcs'),
+(54, 7, 40, 10000, 10, 'Biji'),
+(55, 7, 41, 20000, 19, 'pcs');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rb_penjualan`
+-- Struktur dari tabel `rb_penjualan`
 --
 
 CREATE TABLE `rb_penjualan` (
@@ -1145,7 +1103,7 @@ CREATE TABLE `rb_penjualan` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `rb_penjualan`
+-- Dumping data untuk tabel `rb_penjualan`
 --
 
 INSERT INTO `rb_penjualan` (`id_penjualan`, `kode_transaksi`, `id_pembeli`, `diskon`, `kurir`, `service`, `ongkir`, `resi`, `waktu_transaksi`, `proses`) VALUES
@@ -1166,12 +1124,36 @@ INSERT INTO `rb_penjualan` (`id_penjualan`, `kode_transaksi`, `id_pembeli`, `dis
 (15, 'TRX-20191120070207', 1, 0, 'pos', 'Paket Kilat Khusus', 76500, 'RESI-432312AD12', '2019-11-20 07:02:21', '0'),
 (16, 'TRX-20191120072356', 1, 0, 'cod', 'Cash on delivery', 1, '', '2019-11-20 07:28:30', '0'),
 (17, 'TRX-20201012020036', 29, 0, 'jne', 'Cash on delivery', 1, '547601016142539', '2020-10-12 02:03:58', '3'),
-(18, 'TRX-20201012024949', 29, 0, 'jne', 'Cash on delivery', 1, '547601016142539', '2020-10-12 02:50:16', '3');
+(18, 'TRX-20201012024949', 29, 0, 'jne', 'Cash on delivery', 1, '547601016142539', '2020-10-12 02:50:16', '3'),
+(19, 'TRX-20210621104214', 31, 80000, 'cod', 'Cash on delivery', 1, NULL, '2021-06-21 10:48:42', '0'),
+(20, 'TRX-20210621132226', 31, 0, 'jne', 'REG', 50000, NULL, '2021-06-21 13:25:12', '0'),
+(21, 'TRX-20210621143040', 32, 0, 'jne', 'OKE', 51000, NULL, '2021-06-21 14:31:42', '0'),
+(22, 'TRX-20210621143215', 32, 20000, 'pos', 'Paket Kilat Khusus', 54000, NULL, '2021-06-21 14:32:29', '2'),
+(23, 'TRX-20210621185636', 35, 20000, 'jne', 'OKE', 23000, NULL, '2021-06-21 19:01:09', '0'),
+(24, 'TRX-20210621191835', 37, 20000, 'cod', 'Cash on delivery', 1, NULL, '2021-06-21 19:18:46', '0'),
+(25, 'TRX-20210623105110', 40, 0, 'pos', 'Paket Kilat Khusus', 8000, NULL, '2021-06-23 10:53:23', '0'),
+(26, 'TRX-20210623105352', 40, 0, 'cod', 'Cash on delivery', 1, NULL, '2021-06-23 10:54:06', '0'),
+(27, 'TRX-20210623105443', 40, 0, 'cod', 'Cash on delivery', 1, NULL, '2021-06-23 10:54:57', '3'),
+(28, 'TRX-20210623122150', 41, 0, 'jne', 'OKE', 7000, NULL, '2021-06-23 12:22:11', '3'),
+(29, 'TRX-20210623122821', 41, 0, 'tiki', 'REG', 10000, NULL, '2021-06-23 12:28:34', '0'),
+(30, 'TRX-20210623122856', 41, 0, 'tiki', 'ECO', 7000, NULL, '2021-06-23 12:29:10', '0'),
+(31, 'TRX-20210623122942', 41, 0, 'pos', 'Paket Kilat Khusus', 8000, NULL, '2021-06-23 12:29:54', '2'),
+(32, 'TRX-20210707232947', 40, 0, 'cod', 'Cash on delivery', 1, NULL, '2021-07-07 23:34:31', '0'),
+(33, 'TRX-20210707233523', 40, 0, 'jne', 'OKE', 7000, NULL, '2021-07-07 23:35:42', '0'),
+(34, 'TRX-20210707233604', 40, 0, 'jne', 'OKE', 7000, NULL, '2021-07-07 23:37:02', '0'),
+(35, 'TRX-20210716220915', 40, 0, 'pos', 'Paket Kilat Khusus', 8000, NULL, '2021-07-16 22:12:24', '0'),
+(36, 'TRX-20210716221334', 40, 0, 'cod', 'Cash on delivery', 1, NULL, '2021-07-16 22:13:45', '0'),
+(37, 'TRX-20210717162611', 40, 0, 'cod', 'Cash on delivery', 1, NULL, '2021-07-17 16:26:21', '0'),
+(38, 'TRX-20210720140049', 43, 0, 'cod', 'Cash on delivery', 1, NULL, '2021-07-20 14:01:48', '0'),
+(39, 'TRX-20210720140918', 40, 0, 'cod', 'Cash on delivery', 1, NULL, '2021-07-20 14:12:02', '2'),
+(40, 'TRX-20210720141405', 40, 0, 'pos', 'Express Next Day Barang', 12500, NULL, '2021-07-20 14:14:43', '3'),
+(41, 'TRX-20210720145846', 40, 0, 'jne', 'OKE', 7000, NULL, '2021-07-20 14:59:36', '0'),
+(42, 'TRX-20210720150157', 40, 0, 'cod', 'Cash on delivery', 1, NULL, '2021-07-20 15:02:05', '2');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rb_penjualan_detail`
+-- Struktur dari tabel `rb_penjualan_detail`
 --
 
 CREATE TABLE `rb_penjualan_detail` (
@@ -1185,7 +1167,7 @@ CREATE TABLE `rb_penjualan_detail` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `rb_penjualan_detail`
+-- Dumping data untuk tabel `rb_penjualan_detail`
 --
 
 INSERT INTO `rb_penjualan_detail` (`id_penjualan_detail`, `id_penjualan`, `id_produk`, `jumlah`, `harga_jual`, `satuan`, `keterangan_order`) VALUES
@@ -1213,12 +1195,48 @@ INSERT INTO `rb_penjualan_detail` (`id_penjualan_detail`, `id_penjualan`, `id_pr
 (22, 15, 13, 1, 65000, 'pcs', NULL),
 (23, 16, 13, 1, 65000, 'pcs', 'XL, Merah'),
 (24, 17, 13, 1, 65000, 'pcs', ''),
-(25, 18, 1, 12, 70000, 'pcs', '');
+(25, 18, 1, 12, 70000, 'pcs', ''),
+(26, 19, 12, 4, 65000, 'unit', 'xl, merah'),
+(27, 20, 11, 1, 89000, 'pcs', 'MERAH'),
+(28, 20, 13, 1, 65000, 'pcs', 'PUTIH'),
+(29, 20, 4, 2, 129900, 'unit', ''),
+(30, 21, 5, 1, 755000, 'unit', ''),
+(31, 21, 9, 1, 68500, 'unit', 'terserah'),
+(32, 22, 12, 1, 65000, 'unit', ''),
+(33, 23, 12, 1, 65000, 'unit', ''),
+(34, 23, 7, 1, 99000, 'unit', ''),
+(35, 24, 12, 1, 65000, 'unit', ''),
+(36, 25, 37, 1, 33000, 'pcs', ''),
+(37, 25, 38, 1, 18000, 'pcs', ''),
+(38, 26, 37, 1, 33000, 'pcs', ''),
+(39, 27, 37, 1, 33000, 'pcs', ''),
+(40, 28, 29, 1, 30000, 'pcs', 'MERAH'),
+(41, 28, 34, 1, 18000, 'pcs', ''),
+(42, 29, 30, 1, 30000, 'pcs', ''),
+(43, 30, 29, 1, 30000, 'pcs', ''),
+(44, 31, 35, 1, 18000, 'pcs', ''),
+(45, 32, 37, 1, 33000, 'pcs', ''),
+(46, 32, 33, 1, 21000, 'pcs', ''),
+(47, 33, 31, 1, 38000, 'pcs', ''),
+(48, 34, 30, 1, 30000, 'pcs', ''),
+(49, 34, 37, 1, 33000, 'pcs', ''),
+(50, 35, 40, 1, 5000, 'Biji', ''),
+(51, 35, 38, 1, 18000, 'pcs', ''),
+(52, 35, 37, 1, 33000, 'pcs', ''),
+(53, 36, 38, 1, 18000, 'pcs', ''),
+(54, 37, 38, 1, 18000, 'pcs', ''),
+(55, 38, 38, 1, 18000, 'pcs', ''),
+(56, 38, 40, 1, 5000, 'Biji', ''),
+(57, 39, 37, 1, 33000, 'pcs', ''),
+(58, 39, 40, 2, 5000, 'Biji', 'merah'),
+(59, 40, 38, 1, 18000, 'pcs', ''),
+(60, 41, 31, 1, 38000, 'pcs', ''),
+(61, 42, 38, 1, 18000, 'pcs', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rb_penjualan_temp`
+-- Struktur dari tabel `rb_penjualan_temp`
 --
 
 CREATE TABLE `rb_penjualan_temp` (
@@ -1232,10 +1250,21 @@ CREATE TABLE `rb_penjualan_temp` (
   `waktu_order` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `rb_penjualan_temp`
+--
+
+INSERT INTO `rb_penjualan_temp` (`id_penjualan_detail`, `session`, `id_produk`, `jumlah`, `harga_jual`, `satuan`, `keterangan_order`, `waktu_order`) VALUES
+(39, 'TRX-20210622135550', 13, 1, 65000, 'pcs', '', '2021-06-22 13:55:50'),
+(37, 'TRX-20210621190934', 13, 1, 65000, 'pcs', '', '2021-06-21 19:09:34'),
+(28, 'TRX-20210621132809', 12, 1, 65000, 'unit', '', '2021-06-21 13:28:09'),
+(40, 'TRX-20210623104514', 38, 2, 18000, 'pcs', '', '2021-06-23 10:45:14'),
+(60, 'TRX-20210720133954', 38, 1, 18000, 'pcs', '', '2021-07-20 13:39:54');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rb_produk`
+-- Struktur dari tabel `rb_produk`
 --
 
 CREATE TABLE `rb_produk` (
@@ -1256,28 +1285,49 @@ CREATE TABLE `rb_produk` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `rb_produk`
+-- Dumping data untuk tabel `rb_produk`
 --
 
 INSERT INTO `rb_produk` (`id_produk`, `id_kategori_produk`, `nama_produk`, `produk_seo`, `satuan`, `harga_beli`, `harga_reseller`, `harga_konsumen`, `berat`, `diskon`, `gambar`, `keterangan`, `username`, `waktu_input`) VALUES
-(1, 1, 'Segitiga Instan Aira- AA94.9 Tropical Blue', 'segitiga-instan-aira-aa94-9-tropical-blue', 'pcs', 60000, 65000, 70000, '300', 0, 'RYB6_1_Grey_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\n\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\n', 'admin', '2017-05-23 17:04:25'),
-(2, 1, 'Segitiga Instan Aira- AA94.8 Minty Green', 'segitiga-instan-aira-aa94-8-minty-green', 'pcs', 340000, 345000, 350000, '500', 0, 'RV71_27_Jeans_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-23 17:10:17'),
-(3, 2, 'Segitiga Instan KEINA - KN54.38 Delfine Lilac', 'segitiga-instan-keina-kn54-38-delfine-lilac', 'unit', 159980, 164980, 169980, '300', 0, 'RV71_5_Cold_Ocean_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:47:14'),
-(4, 1, 'Segitiga Instan Madeira - MDB5.3 Sunset', 'segitiga-instan-madeira-mdb5-3-sunset', 'unit', 119900, 124900, 129900, '100', 0, 'MK97_7_Mocca_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:53:10'),
-(5, 1, 'Segitiga Instan Madeira - MDB5.2 Ocean', 'segitiga-instan-madeira-mdb5-2-ocean', 'unit', 745000, 750000, 755000, '150', 0, 'KYB4_14_Soft_Lavender_1024x1024_f993283a-dae0-4a05-b163-9f6b44465732_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:56:24'),
-(6, 1, 'Pashmina Instan Rafella - RLN1.2 Gold Maroon', 'pashmina-instan-rafella-rln1-2-gold-maroon', 'unit', 65000, 70000, 75000, '130', 0, 'Emily_Grey_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 06:57:11'),
-(7, 6, 'Pashmina Instan Rafella - RLN1.1 Sweet Grey', 'pashmina-instan-rafella-rln1-1-sweet-grey', 'unit', 89000, 94000, 99000, '600', 0, 'AYD5_3_Mayra_Pink_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 09:52:58'),
-(8, 6, 'Pashmina Instan Rafella - RLN1.3 Lilac', 'pashmina-instan-rafella-rln1-3-lilac', 'unit', 24500, 29500, 34500, '220', 0, 'AR96_13_Tartan_Grey_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 09:55:04'),
-(9, 6, 'Pashmina Instan Diva Lava - DL85.5 Misty Sky', 'pashmina-instan-diva-lava-dl85-5-misty-sky', 'unit', 58500, 63500, 68500, '250', 0, 'AR91_95_Sheva_Maroon_1_grande.png', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 09:58:43'),
-(10, 2, 'Pashmina Instan Diva Lava - DL85.1 Green Sea', 'pashmina-instan-diva-lava-dl85-1-green-sea', 'pcs', 49900, 54900, 59900, '320', 0, 'AR91_87_Molly_Grey_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 10:02:14'),
-(11, 2, 'Pashmina Instan Famora - OR82.16 Plum', 'pashmina-instan-famora-or82-16-plum', 'pcs', 79000, 84000, 89000, '250', 0, 'AR91_45_Afia_Black_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 10:03:47'),
-(12, 2, 'Pashmina Instan Famora - OR82.1 Black sweet', 'pashmina-instan-famora-or82-1-black-sweet', 'unit', 55000, 60000, 65000, '360', 20000, 'AF_23_6_Best_Of_Black_1024x1024_6e855c30-c2e4-4423-88ac-0f8e9dfeedc4_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 10:06:33'),
-(13, 2, 'Segiempat Rebya  - RYB6.7 Pink Clover', 'segiempat-rebya-ryb6-7-pink-clover', 'pcs', 55000, 60000, 65000, '300', 0, 'AD_19_20_Misty_Grey_grande.jpg', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque condimentum mattis. Suspendisse potenti. Proin vitae elementum nisi. Aliquam eu pretium risus. Nam varius efficitur consectetur. Aenean vestibulum felis sed mollis faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin venenatis est sit amet eleifend vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id nunc eu odio ultrices pulvinar non feugiat felis. Duis consequat urna sapien, porta gravida diam venenatis at. Duis at ornare enim, ac accumsan eros. Sed in finibus metus. Etiam blandit tristique orci, sit amet congue dui facilisis id. Donec fermentum diam at orci viverra placerat. Sed nunc lorem, cursus nec vestibulum hendrerit, tempus et libero.</p>\r\n\r\n<p>Donec consequat lacinia fringilla. Proin dapibus justo at elit iaculis, eu rutrum velit dapibus. Phasellus nec augue vel nisl sagittis malesuada vel vel orci. In in euismod massa. Praesent vel blandit arcu. Maecenas eleifend dui in est rhoncus, mattis sollicitudin augue semper. Donec a lectus rhoncus, ornare nunc rutrum, egestas arcu. Aenean dapibus urna non nisl dignissim volutpat.</p>\r\n', 'admin', '2017-05-30 10:10:37');
+(17, 14, 'Segi Empat Lasercut Warna Mocca', 'segi-empat-lasercut-warna-mocca', 'pcs', 20000, 23000, 25000, '100gr', 0, 'laser11.jpeg', '<p>Kerudung segiempat disertai lasercut tiap pinggirnya, dengan berbagai pilihan warna netral dan pastel. Memiliki ketebalan yang pas, bisa pemakaian biasa dan syari. Tidak licin dan menyerap keringat. Cocok digunakan untuk sehari-hari dan formal</p>\r\n', 'admin', '2021-06-22 15:03:24'),
+(18, 14, 'Segi Empat Lasercut Rosewood', 'segi-empat-lasercut-rosewood', 'pcs', 20000, 23000, 25000, '100gr', 0, 'laser2.jpeg', '<p>Kerudung segiempat disertai lasercut tiap pinggirnya, dengan berbagai pilihan warna netral dan pastel. Memiliki ketebalan yang pas, bisa pemakaian biasa dan syari. Tidak licin dan menyerap keringat. Cocok digunakan untuk sehari-hari dan formal</p>\r\n', 'admin', '2021-06-22 15:04:06'),
+(2, 14, 'Segi Empat Lasercut Baby Pink', 'segi-empat-lasercut-baby-pink', 'pcs', 20000, 23000, 25000, '100gr', 0, '31.jpg', '<p>Kerudung segiempat disertai lasercut tiap pinggirnya, dengan berbagai pilihan warna netral dan pastel. Memiliki ketebalan yang pas, bisa pemakaian biasa dan syari. Tidak licin dan menyerap keringat. Cocok digunakan untuk sehari-hari dan formal</p>\r\n', 'admin', '2017-05-23 17:10:17'),
+(19, 13, 'Pashmina Crincle Full Rawis Part 1', 'pashmina-crincle-full-rawis-part-1', 'pcs', 22000, 26000, 28000, '150gr', 0, 'crincle11.PNG', '<p>Pashmina Crinkle Shawl Crimp Cotton Hijab Pasmina Rawis Kerudung Kusut dengan bahan yang sangat mudah diatur, bisa tetap rapi meskipun tanpa peniti. Ini adalah ironless hijab jadi tidak perlu di strika</p>\r\n', 'admin', '2021-06-22 15:08:24'),
+(20, 13, 'Pashmina Crincle Full Rawis Part 2', 'pashmina-crincle-full-rawis-part-2', 'pcs', 22000, 26000, 28000, '150gr', 0, 'crincle21.PNG', '<p>Pashmina Crinkle Shawl Crimp Cotton Hijab Pasmina Rawis Kerudung Kusut dengan bahan yang sangat mudah diatur, bisa tetap rapi meskipun tanpa peniti. Ini adalah ironless hijab jadi tidak perlu di strika</p>\r\n', 'admin', '2021-06-22 15:09:26'),
+(3, 14, 'Segi Empat Lasercut Navy', 'segi-empat-lasercut-navy', 'pcs', 20000, 23000, 25000, '100gr', 0, '21.jpg', '<p>Kerudung segiempat disertai lasercut tiap pinggirnya, dengan berbagai pilihan warna netral dan pastel. Memiliki ketebalan yang pas, bisa pemakaian biasa dan syari. Tidak licin dan menyerap keringat. Cocok digunakan untuk sehari-hari dan formal</p>\r\n', 'admin', '2017-05-30 06:47:14'),
+(21, 13, 'Pashmina Crinkle Full Rawis Part 3', 'pashmina-crinkle-full-rawis-part-3', 'pcs', 22000, 26000, 28000, '150gr', 0, 'crincle31.PNG', '<p>Pashmina Crinkle Shawl Crimp Cotton Hijab Pasmina Rawis Kerudung Kusut dengan bahan yang sangat mudah diatur, bisa tetap rapi meskipun tanpa peniti. Ini adalah ironless hijab jadi tidak perlu di strika</p>\r\n', 'admin', '2021-06-22 15:10:38'),
+(22, 13, 'Pashmina Crincle Full Rawis Part 4', 'pashmina-crincle-full-rawis-part-4', 'pcs', 22000, 26000, 28000, '150gr', 0, 'crincle41.PNG', '<p>Pashmina Crinkle Shawl Crimp Cotton Hijab Pasmina Rawis Kerudung Kusut dengan bahan yang sangat mudah diatur, bisa tetap rapi meskipun tanpa peniti. Ini adalah ironless hijab jadi tidak perlu di strika</p>\r\n', 'admin', '2021-06-22 15:11:51'),
+(4, 14, 'Segi Empat Lasercut Black', 'segi-empat-lasercut-black', 'pcs', 20000, 23000, 25000, '100gr', 0, '11.jpg', '<p>Kerudung segiempat disertai lasercut tiap pinggirnya, dengan berbagai pilihan warna netral dan pastel. Memiliki ketebalan yang pas, bisa pemakaian biasa dan syari. Tidak licin dan menyerap keringat. Cocok digunakan untuk sehari-hari dan formal</p>\r\n', 'admin', '2017-05-30 06:53:10'),
+(23, 13, 'Pashmina Crincle Full Rawis Part 5', 'pashmina-crincle-full-rawis-part-5', 'pcs', 22000, 26000, 28000, '150gr', 0, 'crincle51.PNG', '<p>Pashmina Crinkle Shawl Crimp Cotton Hijab Pasmina Rawis Kerudung Kusut dengan bahan yang sangat mudah diatur, bisa tetap rapi meskipun tanpa peniti. Ini adalah ironless hijab jadi tidak perlu di strika</p>\r\n', 'admin', '2021-06-22 15:12:41'),
+(24, 12, 'Pashmina Diamond', 'pashmina-diamond', 'pcs', 24000, 28000, 30000, '125gr', 0, 'photo_2021-06-22_19-28-41.jpg', '<p>Hijab Pashmina diamond adalah kerudung atau pashmina dengan bahan kain diamond cerutti atau biasa juga disebut dengan diamond crepe. Memiliki karakter tipis, kain jilbab diamond bertekstur kulit jeruk dan ringan.</p>\r\n', 'admin', '2021-06-22 15:16:26'),
+(5, 14, 'Segi Empat Lasercut Murstard', 'segi-empat-lasercut-murstard', 'pcs', 20000, 23000, 300000, '100gr', 0, 'laser41.jpeg', '<p>Kerudung segiempat disertai lasercut tiap pinggirnya, dengan berbagai pilihan warna netral dan pastel. Memiliki ketebalan yang pas, bisa pemakaian biasa dan syari. Tidak licin dan menyerap keringat. Cocok digunakan untuk sehari-hari dan formal</p>\r\n', 'admin', '2017-05-30 06:56:24'),
+(25, 11, 'Pashmina Tali Ceruty Babydoll', 'pashmina-tali-ceruty-babydoll', 'pcs', 26000, 30000, 32000, '120gr', 0, 'tali1.PNG', '<p>PASHMINA TALI CERUTY BABYDOLL<br />\r\nTerbuat dari bahan ceruty babydoll dikombinasikan dengan dua tali dengan detail full jahit tepi sangat cocok di pakai sehari-hari buat yang males pakai pentul. pemakaian yang ga ribet. Jenis ceruti babydoll premium (high quality), bahan ceruty nya yang bagus dan mudah di atur, ga licin banget, jadi enaken dipakenya, bukan yang abal abal ya sista, cerutynya memiliki tekstur yang lembut jatuh dan lebih tebal dibandingkan ceruti babydoll standar, bahannya tidak mudah kusut, nyaman sewaktu dikenakan , Ceruti Babydoll memiliki sifat lentur, tidak mengkilap.</p>\r\n', 'admin', '2021-06-22 15:19:59'),
+(26, 10, 'Pashmina Plisket Part 1', 'pashmina-plisket-part-1', 'pcs', 28000, 33000, 35000, '120gr', 0, 'photo_2021-06-22_19-10-361.jpg', '<p>Seperti pada fashion untuk para hijabers yaitu&nbsp;pashmina&nbsp;berbahan dasar ceruty baby doll yang dibentuk menjadi&nbsp;plisket. Kain&nbsp;plisket&nbsp;sendiri merupakan kain yang dilipat-lipat rapi menggunakan obat cairan kimia dan alat khusus. Sebelumnya tren&nbsp;plisket&nbsp;diaplikasikan pada rok namun sekarang berkembang hingga ke&nbsp;pashmina</p>\r\n', 'admin', '2021-06-22 15:23:02'),
+(27, 10, 'Pashmina Plisket Part 2', 'pashmina-plisket-part-2', 'pcs', 28000, 33000, 35000, '120gr', 0, 'photo_2021-06-22_19-10-33.jpg', '<p>Seperti pada fashion untuk para hijabers yaitu&nbsp;pashmina&nbsp;berbahan dasar ceruty baby doll yang dibentuk menjadi&nbsp;plisket. Kain&nbsp;plisket&nbsp;sendiri merupakan kain yang dilipat-lipat rapi menggunakan obat cairan kimia dan alat khusus. Sebelumnya tren&nbsp;plisket&nbsp;diaplikasikan pada rok namun sekarang berkembang hingga ke&nbsp;pashmina</p>\r\n', 'admin', '2021-06-22 15:24:32'),
+(28, 9, 'Bergo Maryam', 'bergo-maryam', 'pcs', 20000, 24000, 26000, '92gr', 0, 'photo_2021-06-22_19-10-30.jpg', '<p>Jilbab&nbsp;bergo maryam&nbsp;merupakan salah satu jenis jilbab variasi yang nyaman digunakan. Banyaknya model hijab saat ini membuat pengguna lebih mudah dalam memilih hijab. Variasi hijab juga semakin beragam. Seperti jilbab segi empat hingga sebuah khimar.</p>\r\n', 'admin', '2021-06-22 15:30:46'),
+(7, 15, 'Hijab Syar Blue', 'hijab-syar-blue', 'pcs', 30000, 38000, 40000, '200gr', 0, 'syari61.jpeg', '<p>Hijab yang syari, akan tampak menutupi seluruh tubuh dari ujung kepala hingga ujung kaki, kecuali wajah dan telapak tangan. Tidak diperkenankan ada bagian rambut yang terlihat, leher atau telinga yang terbuka, maupun mata kaki yang dapat dilihat. Begitu pula bagian dada yang perlu ditutupi secara sempurna</p>\r\n', 'admin', '2017-05-30 09:52:58'),
+(29, 8, 'Pashmina Ceruty Babydoll Part 1', 'pashmina-ceruty-babydoll-part-1', 'pcs', 22000, 28000, 30000, '120gr', 0, 'photo_2021-06-22_19-15-251.jpg', '<p>&nbsp;</p>\r\n\r\n<p>PASHMINA CERUTY BABYDOLL PLAIN PASHMINA (bukan instan)<br />\r\nBahannya yang berserat pasir dan jatuh serta elegan. nyaman bgt di pakai. disarankan menggunakan inner. karena ceruty sedikit nerawang beda dengan bahan diamond. pastinya cocok banget buat acara formal daily sampe kondangan.</p>\r\n', 'admin', '2021-06-22 15:33:52'),
+(30, 8, 'Pashmina Ceruty Babydoll Part 2', 'pashmina-ceruty-babydoll-part-2', 'pcs', 22000, 28000, 30000, '120gr', 0, 'photo_2021-06-22_19-22-34.jpg', '<p>&nbsp;</p>\r\n\r\n<p>PASHMINA CERUTY BABYDOLL PLAIN PASHMINA (bukan instan)<br />\r\nBahannya yang berserat pasir dan jatuh serta elegan. nyaman bgt di pakai. disarankan menggunakan inner. karena ceruty sedikit nerawang beda dengan bahan diamond. pastinya cocok banget buat acara formal daily sampe kondangan.</p>\r\n', 'admin', '2021-06-22 15:35:20'),
+(8, 15, 'Hijab Syar\'i Instan Baby Pink', 'hijab-syari-instan-baby-pink', 'pcs', 30000, 38000, 40000, '200gr', 0, 'syari41.jpeg', '<p>Hijab yang syari, akan tampak menutupi seluruh tubuh dari ujung kepala hingga ujung kaki, kecuali wajah dan telapak tangan. Tidak diperkenankan ada bagian rambut yang terlihat, leher atau telinga yang terbuka, maupun mata kaki yang dapat dilihat. Begitu pula bagian dada yang perlu ditutupi secara sempurna</p>\r\n', 'admin', '2017-05-30 09:55:04'),
+(31, 7, 'Pashmina Square ', 'pashmina-square-', 'pcs', 32000, 36000, 38000, '120gr', 0, 'photo_2021-06-22_19-18-54.jpg', '<p>PASHMINA SQUARE</p>\r\n\r\n<p>Terobosan baru dimana kombinasi antara hijab square dan pashmina dibuat dari bahan cerutybabydoll sama seperti bahan yang di gunakan pashmina ceruty bertekstur pasir. buat yang gak pede&nbsp;pakai pashmina ini bisa jadi solusinya nih.<br />\r\njadi nantinya pemakaian hasil akhir akan terlihat kaya pakai hijab square di bagian depan, dan look pashmina di bagian belakang.</p>\r\n', 'admin', '2021-06-22 15:41:09'),
+(32, 6, 'Inner Basic', 'inner-basic', 'pcs', 10000, 13000, 15000, '30gr', 0, 'photo_2021-06-22_19-10-25.jpg', '<p>Inner Basic Turki (kualitas premium)<br />\r\n__<br />\r\nInner basic tanpa ribet, bahannya super premium, adem banget &amp; gak mudah geser saat kalian pake, berasa gak pake daleman karna saking ringannya<br />\r\nBahan: kaos p.e rayon spandek premium<br />\r\nKarakter bahan : Adem, stretch (elastis), gabikin sakit telinga.<br />\r\nBagian belakang ada aksen tali yang mudah di sesuaikan serta model belakang yg tertutup &amp; besar, jd bisa menampung cepol/ ikat rambut kalian tanpa takut keluar2</p>\r\n', 'admin', '2021-06-22 15:46:08'),
+(9, 15, 'Hijab Syar\'i Instan Maroon', 'hijab-syari-instan-maroon', 'pcs', 30000, 38000, 40000, '200gr', 0, 'syari31.jpeg', '<p>Hijab yang syari, akan tampak menutupi seluruh tubuh dari ujung kepala hingga ujung kaki, kecuali wajah dan telapak tangan. Tidak diperkenankan ada bagian rambut yang terlihat, leher atau telinga yang terbuka, maupun mata kaki yang dapat dilihat. Begitu pula bagian dada yang perlu ditutupi secara sempurna</p>\r\n', 'admin', '2017-05-30 09:58:43'),
+(33, 5, 'Segi Empat Bella Square', 'segi-empat-bella-square', 'pcs', 16000, 19000, 21000, '120gr', 0, 'photo_2021-06-22_19-10-22.jpg', '<p>Basic hijab yang super nyaman dan tegak di dahi. Plain hijab yang masih best seller hingga sekarang. Karena tekstur lembut dan karakteristiknya yang gak ribet, tanpa setrika, anti lecel, adem dan friendly buat dipake sehari hari dengan pinggiran jahit tepi rapi bukan neci. Tentu saja kerudung segiempat ini sangat nyaman saat dipakai dan mudah dibentuk.<br />\r\nDengan menggunakan Bahan : pollycotton premium grade A ukuran -/+ 115*115cm berat hijab</p>\r\n', 'admin', '2021-06-22 15:48:24'),
+(10, 15, 'Hijab Syar\'i Instan Dark Grey', 'hijab-syari-instan-dark-grey', 'pcs', 30000, 38000, 40000, '200gr', 0, 'syari21.jpeg', '<p>Hijab yang syari, akan tampak menutupi seluruh tubuh dari ujung kepala hingga ujung kaki, kecuali wajah dan telapak tangan. Tidak diperkenankan ada bagian rambut yang terlihat, leher atau telinga yang terbuka, maupun mata kaki yang dapat dilihat. Begitu pula bagian dada yang perlu ditutupi secara sempurna</p>\r\n', 'admin', '2017-05-30 10:02:14'),
+(34, 4, 'Ciput Ninja Resleting Part 1', 'ciput-ninja-resleting-part-1', 'pcs', 13000, 16000, 18000, '60gr', 0, 'photo_2021-06-22_19-33-57.jpg', '<p>CIPUT NINJA RESLETING<br />\r\nBAHAN: p.e rayon spandek premium<br />\r\nKarakter bahan : Adem, stretch (elastis), gabikin sakit telinga.<br />\r\nBagian belakang leher ada aksen resleting.</p>\r\n\r\n<p>??Anti Pusing - anti sakit kuping - tidak mudah lecek<br />\r\n??Mudah menyerap keringat dan cepat kering<br />\r\n??Elastis dan sangat nyaman<br />\r\n??Mengikuti bentuk wajah<br />\r\n??Bagian belakang ada restleting bisa di adjust sesuai kepala</p>\r\n', 'admin', '2021-06-22 15:53:35'),
+(35, 4, 'Ciput Ninja Resleting Part 2', 'ciput-ninja-resleting-part-2', 'pcs', 13000, 16000, 18000, '60gr', 0, 'photo_2021-06-22_19-34-02.jpg', '<p>IPUT NINJA RESLETING<br />\r\nBAHAN: p.e rayon spandek premium<br />\r\nKarakter bahan : Adem, stretch (elastis), gabikin sakit telinga.<br />\r\nBagian belakang leher ada aksen resleting.</p>\r\n\r\n<p>??Anti Pusing - anti sakit kuping - tidak mudah lecek<br />\r\n??Mudah menyerap keringat dan cepat kering<br />\r\n??Elastis dan sangat nyaman<br />\r\n??Mengikuti bentuk wajah<br />\r\n??Bagian belakang ada restleting bisa di adjust sesuai kepala</p>\r\n', 'admin', '2021-06-22 15:55:46'),
+(11, 15, 'Hijab Syar\'i Instan Navy', 'hijab-syari-instan-navy', 'pcs', 30000, 38000, 40000, '200gr', 0, 'syari1.jpeg', '<p>Hijab yang syari, akan tampak menutupi seluruh tubuh dari ujung kepala hingga ujung kaki, kecuali wajah dan telapak tangan. Tidak diperkenankan ada bagian rambut yang terlihat, leher atau telinga yang terbuka, maupun mata kaki yang dapat dilihat. Begitu pula bagian dada yang perlu ditutupi secara sempurna</p>\r\n', 'admin', '2017-05-30 10:03:47'),
+(41, 17, 'Jepit Hijab Korea', 'jepit-hijab-korea', 'pcs', 20000, 24000, 25000, '10gr', 0, 'jepit1.jpg', '<p>Jepit rambut bunga cantik korea dapat memperindah tampilan berhijab anda</p>\r\n', 'admin', '2021-06-30 14:27:49'),
+(37, 2, 'Pashmina Ceruty Emboss ', 'pashmina-ceruty-emboss-', 'pcs', 26000, 31000, 33000, '120gr', 0, 'photo_2021-06-22_19-10-10.jpg', '<p>&nbsp;</p>\r\n\r\n<p>Seperti pashmina ceruty sebelumnya, Pashmina Emboss memiliki bahan yang berserat pasir dan jatuh serta elegan. nyaman bgt di pakai. disarankan menggunakan inner. karena ceruty sedikit nerawang beda dengan bahan diamond. pastinya cocok banget buat acara formal daily sampe kondangan. Pinggiran jahit tepi super rapi jatuh saat dipakai, tidak mudah kusut, tidak berubah setelah dicuci. Bahan sedikit menerawang disarankan pake ciput agar tidak tembus pandang.</p>\r\n', 'admin', '2021-06-22 15:59:46'),
+(12, 16, 'Inner Rajut ', 'inner-rajut-', 'pcs', 20000, 24000, 26000, '300', 20000, 'rajut1111.jpg', '<p>Inner rajut menutup seluruh kepala, termasuk jika memiliki rambut panjang, rambut akan masuk kedalam ciput sehingga memberi volume kepala, dan bisa membuat penampilan lebih terkesan rapih, dan kepala terkesan bervolume dan cantik. Inner rajut yang tersedia di hijabcomplements memiliki bahan rajut grade A, lembut, elastis menyesuaikan bentuk kepala, tapi nggak melar. Nyaman dipakai tidak membuat pusing, budek dan panas</p>\r\n', 'admin', '2017-05-30 10:06:33'),
+(38, 1, 'Manset Leher Part 1', 'manset-leher-part-1', 'pcs', 12000, 16000, 18000, '30gr', 0, 'photo_2021-06-22_19-17-31.jpg', '<h2><span style=\"font-size:12px\"><strong>MANSET LEHER</strong><br />\r\nmanset leher merupakan solusi penutup leher sampai Dada untuk kemeja. jadi tidak usah kuatir lagi dengan kemeja2 yang memiliki lingkar leher longgar<br />\r\nManset Leher Ukuran Fit to XL<br />\r\n- Manset ini terbuat dari bahan kaos premium spandek<br />\r\n- Bahan Adem Dan enak di kenakan dan tebel<br />\r\n- ORIGINAL QUALITY<br />\r\n- UKURAN pundak +/-18 cm<br />\r\n- Panjang dari leher ke bawah +/-25 cm</span></h2>\r\n', 'admin', '2021-06-22 16:03:39'),
+(13, 16, 'Inner Rajut 2 warna', 'inner-rajut-2-warna', 'pcs', 19000, 23000, 25000, '30gr', 0, 'rajut1.jpg', '<p>Inner rajut Zigzag menutup seluruh kepala, termasuk jika memiliki rambut panjang, rambut akan masuk kedalam ciput sehingga memberi volume kepala, dan bisa membuat penampilan lebih terkesan rapih, dan kepala terkesan bervolume dan cantik. Inner rajut yang tersedia di hijabcomplements memiliki bahan rajut grade A, lembut, elastis menyesuaikan bentuk kepala, tapi nggak melar. Nyaman dipakai tidak membuat pusing, budek dan panas</p>\r\n', 'admin', '2017-05-30 10:10:37'),
+(40, 17, 'Tuspin Rose', 'tuspin-rose', 'Biji', 10000, 8000, 5000, '5gr', 0, 'tuspin_rose.jpg', '<p><strong>tuspin adalah</strong>&nbsp;salah satu aksesoris jilbab yang sering di gunakan untuk mempercantik jilbab yang biasanya di pakai dan di semat kan pada bagian-bagian jilbab tertentu,<strong>&nbsp;tuspin adalah</strong>&nbsp;salah satu aksesoris jilbab yang terbuat dari 1 buah jarum pentul untuk kemudian di beri aplikasi-aplikasi bunga kecil pada bagian atasnya sehingga lebih mempercantik penampilan anda dalam berjilbab juga lebih gampang untuk proses pemakaiannya.</p>\r\n', 'admin', '2021-06-30 14:23:22');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rb_provinsi`
+-- Struktur dari tabel `rb_provinsi`
 --
 
 CREATE TABLE `rb_provinsi` (
@@ -1286,7 +1336,7 @@ CREATE TABLE `rb_provinsi` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `rb_provinsi`
+-- Dumping data untuk tabel `rb_provinsi`
 --
 
 INSERT INTO `rb_provinsi` (`provinsi_id`, `nama_provinsi`) VALUES
@@ -1328,7 +1378,7 @@ INSERT INTO `rb_provinsi` (`provinsi_id`, `nama_provinsi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rb_rekening`
+-- Struktur dari tabel `rb_rekening`
 --
 
 CREATE TABLE `rb_rekening` (
@@ -1339,17 +1389,18 @@ CREATE TABLE `rb_rekening` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `rb_rekening`
+-- Dumping data untuk tabel `rb_rekening`
 --
 
 INSERT INTO `rb_rekening` (`id_rekening`, `nama_bank`, `no_rekening`, `pemilik_rekening`) VALUES
-(1, 'BRI', '547601016142539', 'My Coding'),
-(2, 'BCA', '0320943647', 'My Coding');
+(1, 'BRI', '547601016142539', 'Hijab Style'),
+(2, 'BCA', '0320943647', 'Hijab Style'),
+(3, 'BNI', '0865467864', 'Hijab Style');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rb_supplier`
+-- Struktur dari tabel `rb_supplier`
 --
 
 CREATE TABLE `rb_supplier` (
@@ -1366,18 +1417,18 @@ CREATE TABLE `rb_supplier` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `rb_supplier`
+-- Dumping data untuk tabel `rb_supplier`
 --
 
 INSERT INTO `rb_supplier` (`id_supplier`, `nama_supplier`, `kontak_person`, `alamat_lengkap`, `no_hp`, `alamat_email`, `kode_pos`, `no_telpon`, `fax`, `katerangan`) VALUES
-(1, 'PT. Elektronik Jaya Abadi', 'Muhammad Arsen', 'Jl. Siti Nurbayara, No 23 D, Tunggul Hitam, Padang', '082173054522', 'jaya.abadi@gmail.com', 56123, '0751461692', '0751461691', 'Tidak ada keterangan,..'),
-(2, 'PT. Muda Hardware Sejahtera', 'Saiful Tanjung', 'Jl. Persada Ramayana, Ulak Karang, Padang', '098912334566', 'hardware.sejahtera@gmail.com', 87632, '075165321', '075165312', 'Tidak ada keterangan,..'),
-(3, 'PT. Kereta Kencana', 'Arsenio Orlando', 'Jl. Linggar Jati, No 345, Koto Tangah, padang', '82173054486', 'kereta.kencana@gmail.com', 34587, '0751461692', '0751461693', 'Tidak ada keterangan,..');
+(1, 'Toko Online Jogja Hijabers', 'Muhammad Arsen', 'Jl. Siti Nurbayara, No 23 D, Tunggul Hitam, Jogja', '082173054522', 'Jogjahijabers@gmail.com', 56123, '0751461692', '0751461691', 'Tidak ada keterangan,..'),
+(2, 'PT. Hijab Pasuruan', 'Saiful Tanjung', 'Jl. Persada Ramayana, Ulak Karang, Pasuruan', '098912334566', 'HijabPasuruan@gmail.com', 87632, '075165321', '075165312', 'Tidak ada keterangan,..'),
+(3, 'PT. Supplier Hijab Surabaya', 'Arsenio Orlando', 'Surabaya', '82173054486', 'HijabSurabaya@gmail.com', 34587, '0751461692', '0751461693', 'Tidak ada keterangan,..');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `slide`
+-- Struktur dari tabel `slide`
 --
 
 CREATE TABLE `slide` (
@@ -1388,18 +1439,18 @@ CREATE TABLE `slide` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `slide`
+-- Dumping data untuk tabel `slide`
 --
 
 INSERT INTO `slide` (`id_slide`, `keterangan`, `gambar`, `waktu`) VALUES
-(1, 'Hijab makes a woman as beautiful as an angel', 'hijab3.jpg', '2016-05-13 08:09:18'),
-(2, 'Beautiful Indonesian Women with Beautiful Eyes hijab niqab', 'hijab2.jpg', '2016-05-13 08:10:18'),
-(4, 'Hijabers - Be inspiring woman with hijab', 'hijab1.jpg', '2018-02-18 00:42:22');
+(1, 'Hijab makes a woman as beautiful as an angel', '31.png', '2016-05-13 08:09:18'),
+(2, 'Hijabers Keren Kayak Kita', '21.png', '2016-05-13 08:10:18'),
+(4, 'Hijabers - Be inspiring woman with hijab', '11.png', '2018-02-18 00:42:22');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `statistik`
+-- Struktur dari tabel `statistik`
 --
 
 CREATE TABLE `statistik` (
@@ -1410,7 +1461,7 @@ CREATE TABLE `statistik` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `statistik`
+-- Dumping data untuk tabel `statistik`
 --
 
 INSERT INTO `statistik` (`ip`, `tanggal`, `hits`, `online`) VALUES
@@ -3206,12 +3257,30 @@ INSERT INTO `statistik` (`ip`, `tanggal`, `hits`, `online`) VALUES
 ('::1', '2019-11-20', 117, '1574209879'),
 ('::1', '2020-10-10', 44, '1602347529'),
 ('::1', '2020-10-11', 80, '1602425101'),
-('::1', '2020-10-12', 251, '1602511268');
+('::1', '2020-10-12', 251, '1602511268'),
+('::1', '2021-06-08', 37, '1623126574'),
+('::1', '2021-06-21', 420, '1624278246'),
+('::1', '2021-06-22', 224, '1624367450'),
+('::1', '2021-06-23', 174, '1624427434'),
+('::1', '2021-06-25', 1, '1624589590'),
+('::1', '2021-06-29', 5, '1624949110'),
+('::1', '2021-06-30', 71, '1625050862'),
+('::1', '2021-07-01', 17, '1625135153'),
+('::1', '2021-07-02', 66, '1625200031'),
+('::1', '2021-07-03', 35, '1625297393'),
+('::1', '2021-07-04', 21, '1625377892'),
+('::1', '2021-07-04', 21, '1625377892'),
+('::1', '2021-07-06', 2, '1625573161'),
+('::1', '2021-07-07', 36, '1625676273'),
+('::1', '2021-07-08', 66, '1625738212'),
+('::1', '2021-07-16', 24, '1626448477'),
+('::1', '2021-07-17', 45, '1626518190'),
+('::1', '2021-07-20', 150, '1626775391');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tag`
+-- Struktur dari tabel `tag`
 --
 
 CREATE TABLE `tag` (
@@ -3222,35 +3291,10 @@ CREATE TABLE `tag` (
   `count` int(5) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
---
--- Dumping data for table `tag`
---
-
-INSERT INTO `tag` (`id_tag`, `nama_tag`, `username`, `tag_seo`, `count`) VALUES
-(41, 'Tambak', '', 'tambak', 20),
-(40, 'Perkebunan', '', 'perkebunan', 27),
-(38, 'Marketing', '', 'marketing', 13),
-(37, 'System', '', 'system', 26),
-(36, 'Bonus', '', 'bonus', 17),
-(34, 'Wisata', '', 'wisata', 4),
-(24, 'Olahraga', '', 'olahraga', 11),
-(25, 'Kesehatan', '', 'kesehatan', 16),
-(26, 'Nasional', '', 'nasional', 42),
-(27, 'Metropolitan', '', 'metropolitan', 32),
-(28, 'Teknologi', '', 'teknologi', 12),
-(22, 'Hiburan', '', 'hiburan', 18),
-(43, 'Pertanian', '', 'pertanian', 9),
-(49, 'Peternakan', 'admin', 'peternakan', 6),
-(50, 'pestisida nabati', 'admin', 'pestisida-nabati', 3),
-(51, 'Pupuk Organik', 'admin', 'pupuk-organik', 4),
-(52, 'Travel', 'admin', 'travel', 0),
-(53, 'Umrah', 'admin', 'umrah', 1),
-(54, 'Pesiar', 'admin', 'pesiar', 0);
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `templates`
+-- Struktur dari tabel `templates`
 --
 
 CREATE TABLE `templates` (
@@ -3263,7 +3307,7 @@ CREATE TABLE `templates` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data for table `templates`
+-- Dumping data untuk tabel `templates`
 --
 
 INSERT INTO `templates` (`id_templates`, `judul`, `username`, `pembuat`, `folder`, `aktif`) VALUES
@@ -3272,7 +3316,7 @@ INSERT INTO `templates` (`id_templates`, `judul`, `username`, `pembuat`, `folder
 -- --------------------------------------------------------
 
 --
--- Table structure for table `testimoni`
+-- Struktur dari tabel `testimoni`
 --
 
 CREATE TABLE `testimoni` (
@@ -3284,17 +3328,16 @@ CREATE TABLE `testimoni` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `testimoni`
+-- Dumping data untuk tabel `testimoni`
 --
 
 INSERT INTO `testimoni` (`id_testimoni`, `id_konsumen`, `isi_testimoni`, `aktif`, `waktu_testimoni`) VALUES
-(2, 3, '<p>Menjadi seorang sukses dengan cara instan memang impian banyak orang dan saya yakin anda pun akan menyetujuinya. Namun, kembali lagi kepada diri anda sendiri apakah anda benar-benar memahami makna menjadi seorang entrepreneur sesungguhnya atau hanya memaknai seperti halnya membuat mie instan.</p>\n', 'Y', '2016-09-12 07:09:16'),
-(5, 6, 'Saya berusaha mencoba memaklumi mereka tentang kesan menjadi entrepreneur instan ini dengan menjadi seorang MLM-ers, dengan menanyakan penyebab bisa memunculkan kesan instan tersebut. Mereka memberikan jawaban beragam berkaitan dengan proses instan seorang entrepreneur ini.', 'Y', '2016-09-14 14:11:36');
+(8, 40, '<p>belanja disini sangat recommended</p>\r\n', 'Y', '2021-07-17 17:34:50');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -3311,17 +3354,16 @@ CREATE TABLE `users` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id_users`, `username`, `password`, `nama_lengkap`, `email`, `no_telp`, `foto`, `level`, `blokir`, `id_session`) VALUES
-(1, 'admin', 'edbd881f1ee2f76ba0bd70fd184f87711be991a0401fd07ccd4b199665f00761afc91731d8d8ba6cbb188b2ed5bfb465b9f3d30231eb0430b9f90fe91d136648', 'My Coding', '401xdssh@gmail.com', '085312343434', 'favicon.png', 'admin', 'N', 'q173s8hs1jl04st35169ccl8o7'),
-(4, 'user', '7ed525cc128e77e247fda10704685f21ced735de85c698ce3a6a4e2444010dcf1302a09f5c28728551a24820c8b940d0c06e1906141b4c9f77a276d389d18d43', 'User Saja', 'user@user.com', '085372723132', 'favicon1.png', 'user', 'N', 'ee11cbb19052e40b07aac0ca060c23ee-20201012013224');
+(1, 'admin', 'edbd881f1ee2f76ba0bd70fd184f87711be991a0401fd07ccd4b199665f00761afc91731d8d8ba6cbb188b2ed5bfb465b9f3d30231eb0430b9f90fe91d136648', 'Hijab Style', 'Hijab.Style@gmail.com', '085312343434', 'Hijab_Style.png', 'admin', 'N', 'q173s8hs1jl04st35169ccl8o7');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users_modul`
+-- Struktur dari tabel `users_modul`
 --
 
 CREATE TABLE `users_modul` (
@@ -3331,7 +3373,7 @@ CREATE TABLE `users_modul` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `users_modul`
+-- Dumping data untuk tabel `users_modul`
 --
 
 INSERT INTO `users_modul` (`id_umod`, `id_session`, `id_modul`) VALUES
@@ -3363,399 +3405,401 @@ INSERT INTO `users_modul` (`id_umod`, `id_session`, `id_modul`) VALUES
 (27, 'q173s8hs1jl04st35169ccl8o7', 2),
 (28, 'ee11cbb19052e40b07aac0ca060c23ee-20201012013224', 44),
 (29, 'ee11cbb19052e40b07aac0ca060c23ee-20201012013224', 43),
-(30, 'ee11cbb19052e40b07aac0ca060c23ee-20201012013224', 18);
+(30, 'ee11cbb19052e40b07aac0ca060c23ee-20201012013224', 18),
+(31, 'q173s8hs1jl04st35169ccl8o7', 44),
+(33, 'q173s8hs1jl04st35169ccl8o7', 31);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `album`
+-- Indeks untuk tabel `album`
 --
 ALTER TABLE `album`
   ADD PRIMARY KEY (`id_album`);
 
 --
--- Indexes for table `berita`
+-- Indeks untuk tabel `berita`
 --
 ALTER TABLE `berita`
   ADD PRIMARY KEY (`id_berita`);
 
 --
--- Indexes for table `download`
+-- Indeks untuk tabel `download`
 --
 ALTER TABLE `download`
   ADD PRIMARY KEY (`id_download`);
 
 --
--- Indexes for table `gallery`
+-- Indeks untuk tabel `gallery`
 --
 ALTER TABLE `gallery`
   ADD PRIMARY KEY (`id_gallery`);
 
 --
--- Indexes for table `halamanstatis`
+-- Indeks untuk tabel `halamanstatis`
 --
 ALTER TABLE `halamanstatis`
   ADD PRIMARY KEY (`id_halaman`);
 
 --
--- Indexes for table `hubungi`
+-- Indeks untuk tabel `hubungi`
 --
 ALTER TABLE `hubungi`
   ADD PRIMARY KEY (`id_hubungi`);
 
 --
--- Indexes for table `identitas`
+-- Indeks untuk tabel `identitas`
 --
 ALTER TABLE `identitas`
   ADD PRIMARY KEY (`id_identitas`);
 
 --
--- Indexes for table `kategori`
+-- Indeks untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
   ADD PRIMARY KEY (`id_kategori`);
 
 --
--- Indexes for table `logo`
+-- Indeks untuk tabel `logo`
 --
 ALTER TABLE `logo`
   ADD PRIMARY KEY (`id_logo`);
 
 --
--- Indexes for table `menu`
+-- Indeks untuk tabel `menu`
 --
 ALTER TABLE `menu`
   ADD PRIMARY KEY (`id_menu`);
 
 --
--- Indexes for table `modul`
+-- Indeks untuk tabel `modul`
 --
 ALTER TABLE `modul`
   ADD PRIMARY KEY (`id_modul`);
 
 --
--- Indexes for table `pasangiklan`
+-- Indeks untuk tabel `pasangiklan`
 --
 ALTER TABLE `pasangiklan`
   ADD PRIMARY KEY (`id_pasangiklan`);
 
 --
--- Indexes for table `rb_kategori_produk`
+-- Indeks untuk tabel `rb_kategori_produk`
 --
 ALTER TABLE `rb_kategori_produk`
   ADD PRIMARY KEY (`id_kategori_produk`);
 
 --
--- Indexes for table `rb_keterangan`
+-- Indeks untuk tabel `rb_keterangan`
 --
 ALTER TABLE `rb_keterangan`
   ADD PRIMARY KEY (`id_keterangan`);
 
 --
--- Indexes for table `rb_konfirmasi`
+-- Indeks untuk tabel `rb_konfirmasi`
 --
 ALTER TABLE `rb_konfirmasi`
   ADD PRIMARY KEY (`id_konfirmasi_pembayaran`);
 
 --
--- Indexes for table `rb_konsumen`
+-- Indeks untuk tabel `rb_konsumen`
 --
 ALTER TABLE `rb_konsumen`
   ADD PRIMARY KEY (`id_konsumen`);
 
 --
--- Indexes for table `rb_kota`
+-- Indeks untuk tabel `rb_kota`
 --
 ALTER TABLE `rb_kota`
   ADD PRIMARY KEY (`kota_id`);
 
 --
--- Indexes for table `rb_pembelian`
+-- Indeks untuk tabel `rb_pembelian`
 --
 ALTER TABLE `rb_pembelian`
   ADD PRIMARY KEY (`id_pembelian`);
 
 --
--- Indexes for table `rb_pembelian_detail`
+-- Indeks untuk tabel `rb_pembelian_detail`
 --
 ALTER TABLE `rb_pembelian_detail`
   ADD PRIMARY KEY (`id_pembelian_detail`);
 
 --
--- Indexes for table `rb_penjualan`
+-- Indeks untuk tabel `rb_penjualan`
 --
 ALTER TABLE `rb_penjualan`
   ADD PRIMARY KEY (`id_penjualan`);
 
 --
--- Indexes for table `rb_penjualan_detail`
+-- Indeks untuk tabel `rb_penjualan_detail`
 --
 ALTER TABLE `rb_penjualan_detail`
   ADD PRIMARY KEY (`id_penjualan_detail`);
 
 --
--- Indexes for table `rb_penjualan_temp`
+-- Indeks untuk tabel `rb_penjualan_temp`
 --
 ALTER TABLE `rb_penjualan_temp`
   ADD PRIMARY KEY (`id_penjualan_detail`);
 
 --
--- Indexes for table `rb_produk`
+-- Indeks untuk tabel `rb_produk`
 --
 ALTER TABLE `rb_produk`
   ADD PRIMARY KEY (`id_produk`);
 
 --
--- Indexes for table `rb_provinsi`
+-- Indeks untuk tabel `rb_provinsi`
 --
 ALTER TABLE `rb_provinsi`
   ADD PRIMARY KEY (`provinsi_id`);
 
 --
--- Indexes for table `rb_rekening`
+-- Indeks untuk tabel `rb_rekening`
 --
 ALTER TABLE `rb_rekening`
   ADD PRIMARY KEY (`id_rekening`);
 
 --
--- Indexes for table `rb_supplier`
+-- Indeks untuk tabel `rb_supplier`
 --
 ALTER TABLE `rb_supplier`
   ADD PRIMARY KEY (`id_supplier`);
 
 --
--- Indexes for table `slide`
+-- Indeks untuk tabel `slide`
 --
 ALTER TABLE `slide`
   ADD PRIMARY KEY (`id_slide`);
 
 --
--- Indexes for table `tag`
+-- Indeks untuk tabel `tag`
 --
 ALTER TABLE `tag`
   ADD PRIMARY KEY (`id_tag`);
 
 --
--- Indexes for table `templates`
+-- Indeks untuk tabel `templates`
 --
 ALTER TABLE `templates`
   ADD PRIMARY KEY (`id_templates`);
 
 --
--- Indexes for table `testimoni`
+-- Indeks untuk tabel `testimoni`
 --
 ALTER TABLE `testimoni`
   ADD PRIMARY KEY (`id_testimoni`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id_users`);
 
 --
--- Indexes for table `users_modul`
+-- Indeks untuk tabel `users_modul`
 --
 ALTER TABLE `users_modul`
   ADD PRIMARY KEY (`id_umod`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `album`
+-- AUTO_INCREMENT untuk tabel `album`
 --
 ALTER TABLE `album`
   MODIFY `id_album` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
--- AUTO_INCREMENT for table `berita`
+-- AUTO_INCREMENT untuk tabel `berita`
 --
 ALTER TABLE `berita`
   MODIFY `id_berita` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=301;
 
 --
--- AUTO_INCREMENT for table `download`
+-- AUTO_INCREMENT untuk tabel `download`
 --
 ALTER TABLE `download`
   MODIFY `id_download` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
--- AUTO_INCREMENT for table `gallery`
+-- AUTO_INCREMENT untuk tabel `gallery`
 --
 ALTER TABLE `gallery`
   MODIFY `id_gallery` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=256;
 
 --
--- AUTO_INCREMENT for table `halamanstatis`
+-- AUTO_INCREMENT untuk tabel `halamanstatis`
 --
 ALTER TABLE `halamanstatis`
   MODIFY `id_halaman` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
--- AUTO_INCREMENT for table `hubungi`
+-- AUTO_INCREMENT untuk tabel `hubungi`
 --
 ALTER TABLE `hubungi`
   MODIFY `id_hubungi` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
--- AUTO_INCREMENT for table `identitas`
+-- AUTO_INCREMENT untuk tabel `identitas`
 --
 ALTER TABLE `identitas`
   MODIFY `id_identitas` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `kategori`
+-- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
   MODIFY `id_kategori` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
--- AUTO_INCREMENT for table `logo`
+-- AUTO_INCREMENT untuk tabel `logo`
 --
 ALTER TABLE `logo`
   MODIFY `id_logo` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT for table `menu`
+-- AUTO_INCREMENT untuk tabel `menu`
 --
 ALTER TABLE `menu`
   MODIFY `id_menu` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=148;
 
 --
--- AUTO_INCREMENT for table `modul`
+-- AUTO_INCREMENT untuk tabel `modul`
 --
 ALTER TABLE `modul`
   MODIFY `id_modul` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
--- AUTO_INCREMENT for table `pasangiklan`
+-- AUTO_INCREMENT untuk tabel `pasangiklan`
 --
 ALTER TABLE `pasangiklan`
   MODIFY `id_pasangiklan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
--- AUTO_INCREMENT for table `rb_kategori_produk`
+-- AUTO_INCREMENT untuk tabel `rb_kategori_produk`
 --
 ALTER TABLE `rb_kategori_produk`
-  MODIFY `id_kategori_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_kategori_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT for table `rb_keterangan`
+-- AUTO_INCREMENT untuk tabel `rb_keterangan`
 --
 ALTER TABLE `rb_keterangan`
   MODIFY `id_keterangan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `rb_konfirmasi`
+-- AUTO_INCREMENT untuk tabel `rb_konfirmasi`
 --
 ALTER TABLE `rb_konfirmasi`
-  MODIFY `id_konfirmasi_pembayaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_konfirmasi_pembayaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT for table `rb_konsumen`
+-- AUTO_INCREMENT untuk tabel `rb_konsumen`
 --
 ALTER TABLE `rb_konsumen`
-  MODIFY `id_konsumen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id_konsumen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
--- AUTO_INCREMENT for table `rb_kota`
+-- AUTO_INCREMENT untuk tabel `rb_kota`
 --
 ALTER TABLE `rb_kota`
   MODIFY `kota_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=502;
 
 --
--- AUTO_INCREMENT for table `rb_pembelian`
+-- AUTO_INCREMENT untuk tabel `rb_pembelian`
 --
 ALTER TABLE `rb_pembelian`
   MODIFY `id_pembelian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `rb_pembelian_detail`
+-- AUTO_INCREMENT untuk tabel `rb_pembelian_detail`
 --
 ALTER TABLE `rb_pembelian_detail`
-  MODIFY `id_pembelian_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id_pembelian_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
--- AUTO_INCREMENT for table `rb_penjualan`
+-- AUTO_INCREMENT untuk tabel `rb_penjualan`
 --
 ALTER TABLE `rb_penjualan`
-  MODIFY `id_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_penjualan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
--- AUTO_INCREMENT for table `rb_penjualan_detail`
+-- AUTO_INCREMENT untuk tabel `rb_penjualan_detail`
 --
 ALTER TABLE `rb_penjualan_detail`
-  MODIFY `id_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
--- AUTO_INCREMENT for table `rb_penjualan_temp`
+-- AUTO_INCREMENT untuk tabel `rb_penjualan_temp`
 --
 ALTER TABLE `rb_penjualan_temp`
-  MODIFY `id_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_penjualan_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
--- AUTO_INCREMENT for table `rb_produk`
+-- AUTO_INCREMENT untuk tabel `rb_produk`
 --
 ALTER TABLE `rb_produk`
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
--- AUTO_INCREMENT for table `rb_provinsi`
+-- AUTO_INCREMENT untuk tabel `rb_provinsi`
 --
 ALTER TABLE `rb_provinsi`
   MODIFY `provinsi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
--- AUTO_INCREMENT for table `rb_rekening`
+-- AUTO_INCREMENT untuk tabel `rb_rekening`
 --
 ALTER TABLE `rb_rekening`
-  MODIFY `id_rekening` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_rekening` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `rb_supplier`
+-- AUTO_INCREMENT untuk tabel `rb_supplier`
 --
 ALTER TABLE `rb_supplier`
   MODIFY `id_supplier` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `slide`
+-- AUTO_INCREMENT untuk tabel `slide`
 --
 ALTER TABLE `slide`
   MODIFY `id_slide` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `tag`
+-- AUTO_INCREMENT untuk tabel `tag`
 --
 ALTER TABLE `tag`
   MODIFY `id_tag` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
--- AUTO_INCREMENT for table `templates`
+-- AUTO_INCREMENT untuk tabel `templates`
 --
 ALTER TABLE `templates`
   MODIFY `id_templates` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT for table `testimoni`
+-- AUTO_INCREMENT untuk tabel `testimoni`
 --
 ALTER TABLE `testimoni`
-  MODIFY `id_testimoni` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_testimoni` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
   MODIFY `id_users` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `users_modul`
+-- AUTO_INCREMENT untuk tabel `users_modul`
 --
 ALTER TABLE `users_modul`
-  MODIFY `id_umod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id_umod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
